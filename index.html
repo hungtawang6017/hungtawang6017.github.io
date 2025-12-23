@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="個人作品集網站 - 展示我的專業技能與項目">
+    <meta name="keywords" content="個人網站, 作品集, Portfolio, Web Developer">
+    <meta name="author" content="Your Name">
+
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="個人作品集網站">
+    <meta property="og:description" content="歡迎來到我的個人網站，探索我的專業技能與項目作品">
+    <meta property="og:type" content="website">
+
+    <title>個人作品集 | Portfolio</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">Portfolio</a>
+
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active" data-zh="首頁" data-en="Home">首頁</a></li>
+                <li><a href="#about" class="nav-link" data-zh="關於我" data-en="About">關於我</a></li>
+                <li><a href="#skills" class="nav-link" data-zh="專業技能" data-en="Skills">專業技能</a></li>
+                <li><a href="#projects" class="nav-link" data-zh="作品集" data-en="Projects">作品集</a></li>
+                <li><a href="#contact" class="nav-link" data-zh="聯絡方式" data-en="Contact">聯絡方式</a></li>
+                <li>
+                    <button id="lang-toggle" class="theme-toggle" aria-label="切換語言">
+                        <span class="lang-text">EN</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>
+                <span data-zh="嗨，我是 " data-en="Hi, I'm ">嗨，我是 </span>
+                <span class="text-gradient" data-zh="王泓達" data-en="Hung-Ta Wang">王泓達</span>
+            </h1>
+            <p class="hero-subtitle" data-zh="創新者 · 開發者 · 設計師" data-en="Innovator · Developer · Designer">創新者 · 開發者 ·
+                設計師</p>
+            <p class="hero-description" data-zh="專注於創造出色的數位體驗，結合設計美學與技術實力，打造優雅且高效能的解決方案。"
+                data-en="Focused on creating outstanding digital experiences, combining design aesthetics with technical expertise to build elegant and high-performance solutions.">
+                專注於創造出色的數位體驗，結合設計美學與技術實力，打造優雅且高效能的解決方案。
+            </p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary" data-zh="查看作品" data-en="View Projects">查看作品</a>
+                <a href="#contact" class="btn btn-secondary" data-zh="聯絡我" data-en="Contact Me">聯絡我</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image fade-in">
+                    <img src="profile-placeholder.jpg" alt="個人照片" id="profile-image">
+                </div>
+                <div class="about-text fade-in">
+                    <h2 data-zh="關於我" data-en="About Me">關於我</h2>
+                    <h3 data-zh="打造卓越的數位體驗" data-en="Creating Outstanding Digital Experiences">打造卓越的數位體驗</h3>
+                    <p data-zh="我是一位充滿熱情的開發者與設計師，擁有 X 年的專業經驗。專注於前端開發、UX/UI 設計，以及創新的數位解決方案。"
+                        data-en="I am a passionate developer and designer with X years of professional experience, focusing on front-end development, UX/UI design, and innovative digital solutions.">
+                        我是一位充滿熱情的開發者與設計師，擁有 X 年的專業經驗。專注於前端開發、UX/UI 設計，以及創新的數位解決方案。
+                    </p>
+                    <p data-zh="我相信優秀的設計不僅僅是外觀，更是關於如何為使用者創造直覺、流暢且令人難忘的體驗。每個專案都是一次探索與創新的旅程。"
+                        data-en="I believe great design is more than aesthetics—it's about creating intuitive, seamless, and memorable experiences for users. Every project is a journey of exploration and innovation.">
+                        我相信優秀的設計不僅僅是外觀，更是關於如何為使用者創造直覺、流暢且令人難忘的體驗。每個專案都是一次探索與創新的旅程。
+                    </p>
+                    <p data-zh="在工作之餘，我熱衷於學習新技術、參與開源專案，並持續精進自己的技能。"
+                        data-en="Outside of work, I am passionate about learning new technologies, contributing to open-source projects, and continuously improving my skills.">
+                        在工作之餘，我熱衷於學習新技術、參與開源專案，並持續精進自己的技能。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title" data-zh="專業技能" data-en="Professional Skills">專業技能</h2>
+                <p class="section-subtitle" data-zh="我的專業領域涵蓋多個開發堆疊，從前端到後端，從設計到開發"
+                    data-en="My expertise spans multiple development stacks, from front-end to back-end, from design to development">
+                    我的專業領域涵蓋多個開發堆疊，從前端到後端，從設計到開發</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h4>前端開發</h4>
+                    <p>精通 HTML、CSS、JavaScript 以及現代框架如 React、Vue.js，打造響應式且高效能的使用者介面。</p>
+                </div>
+
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h4>後端開發</h4>
+                    <p>熟悉 Node.js、Python、資料庫設計與 API 開發，建構強大且可擴展的後端系統。</p>
+                </div>
+
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h4>UI/UX 設計</h4>
+                    <p>運用設計思維打造優美且直覺的使用者體驗，熟悉 Figma、Adobe XD 等設計工具。</p>
+                </div>
+
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h4>響應式設計</h4>
+                    <p>確保網站在所有裝置上都能完美呈現，從桌面到平板到手機，無縫的使用體驗。</p>
+                </div>
+
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h4>雲端服務</h4>
+                    <p>熟悉 AWS、Azure、Google Cloud 等雲端平台，部署與管理現代化的雲端應用。</p>
+                </div>
+
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>效能優化</h4>
+                    <p>注重網站效能與 SEO，確保快速載入與優秀的搜尋引擎排名。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title" data-zh="作品集" data-en="Portfolio">作品集</h2>
+                <p class="section-subtitle" data-zh="探索我最新的專案作品與創意實踐"
+                    data-en="Explore my latest projects and creative practices">探索我最新的專案作品與創意實踐</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <img src="project1-placeholder.jpg" alt="專案 1" id="project-1-image">
+                    </div>
+                    <div class="project-info">
+                        <h4>電子商務平台</h4>
+                        <p>
+                            一個現代化的電商平台，具備完整的購物車、支付整合、
+                            以及管理後台系統。
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            查看專案 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <img src="project2-placeholder.jpg" alt="專案 2" id="project-2-image">
+                    </div>
+                    <div class="project-info">
+                        <h4>社群媒體儀表板</h4>
+                        <p>
+                            整合多個社群平台的數據分析儀表板，提供即時洞察與
+                            視覺化數據呈現。
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">D3.js</span>
+                            <span class="tag">API</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            查看專案 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <img src="project3-placeholder.jpg" alt="專案 3" id="project-3-image">
+                    </div>
+                    <div class="project-info">
+                        <h4>行動應用 App</h4>
+                        <p>
+                            跨平台行動應用程式，提供無縫的使用者體驗與
+                            離線功能支援。
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">Redux</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            查看專案 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="section-header fade-in">
+                    <h2 class="section-title" data-zh="聯絡我" data-en="Contact Me">聯絡我</h2>
+                    <p class="section-subtitle" data-zh="有任何專案想法或合作機會？歡迎隨時與我聯繫！"
+                        data-en="Have a project idea or collaboration opportunity? Feel free to reach out!">
+                        有任何專案想法或合作機會？歡迎隨時與我聯繫！</p>
+                </div>
+
+                <div class="contact-info">
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4>Email</h4>
+                        <a href="mailto:your.email@example.com">your.email@example.com</a>
+                    </div>
+
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4>電話</h4>
+                        <a href="tel:+886912345678">+886 912 345 678</a>
+                    </div>
+                </div>
+
+                <div class="social-links fade-in">
+                    <a href="https://github.com/yourusername" class="social-link" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/yourusername" class="social-link" target="_blank"
+                        aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Your Name. All rights reserved.</p>
+                <p>Designed with <i class="fas fa-heart" style="color: #f093fb;"></i> and crafted with precision</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
