@@ -17,7 +17,7 @@ const Hero = () => {
                     className={`hero-content reveal-on-scroll ${isVisible ? 'is-visible' : ''}`}
                 >
                     <h1 style={{ marginBottom: '1.5rem' }}>
-                        <span style={{ display: 'block', fontSize: '1.5rem', fontWeight: '500', color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>{t.greeting}</span>
+                        <span style={{ display: 'block', fontSize: '1.5rem', fontWeight: '500', color: 'var(--color-text)', marginBottom: '0.5rem' }}>{t.greeting}</span>
                         <span className="text-gradient" style={{ fontSize: 'clamp(3rem, 6vw, 5rem)', fontWeight: '800', letterSpacing: '-0.03em', lineHeight: '1.1' }}>{t.name}</span>
                     </h1>
                     <p className="hero-subtitle" style={{ fontSize: '1.25rem', color: 'var(--text-secondary)', fontWeight: '400', maxWidth: '600px', margin: '0 auto 1rem' }}>{t.subtitle}</p>
