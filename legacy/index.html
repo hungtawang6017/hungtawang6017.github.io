@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="個人作品集網站 - 展示我的專業技能與項目">
+    <meta name="keywords" content="個人網站, 作品集, Portfolio, Web Developer">
+    <meta name="author" content="Your Name">
+
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="個人作品集網站">
+    <meta property="og:description" content="歡迎來到我的個人網站，探索我的專業技能與項目作品">
+    <meta property="og:type" content="website">
+
+    <title>個人作品集 | Portfolio</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">Portfolio</a>
+
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active" data-zh="首頁" data-en="Home">首頁</a></li>
+                <li><a href="#about" class="nav-link" data-zh="關於我" data-en="About">關於我</a></li>
+                <li><a href="#skills" class="nav-link" data-zh="專業技能" data-en="Skills">專業技能</a></li>
+                <li><a href="#projects" class="nav-link" data-zh="作品集" data-en="Projects">作品集</a></li>
+                <li><a href="#contact" class="nav-link" data-zh="聯絡方式" data-en="Contact">聯絡方式</a></li>
+                <li>
+                    <button id="lang-toggle" class="theme-toggle" aria-label="切換語言">
+                        <span class="lang-text">EN</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>
+                <span data-zh="嗨，我是 " data-en="Hi, I'm ">嗨，我是 </span>
+                <span class="text-gradient" data-zh="王泓達" data-en="Hung-Ta Wang">王泓達</span>
+            </h1>
+            <p class="hero-subtitle" data-zh="工業工程碩士生 · 數據分析師 · 全端開發者"
+                data-en="Industrial Engineering M.S. Student · Data Analyst · Full Stack Developer">工業工程碩士生 · 數據分析師 ·
+                全端開發者</p>
+            <p class="hero-description" data-zh="目前就讀於國立臺灣大學工業工程學研究所。擁有會計與資訊管理雙學位背景，專注於數據科學、作業研究與動態規劃，致力於將複雜數據轉化為商業價值。"
+                data-en="Currently pursuing an M.S. in Industrial Engineering at NTU. With a double degree in Accounting and Information Management, I specialize in Data Science, Operations Research, and Dynamic Programming, dedicated to transforming complex data into business value.">
+                目前就讀於國立臺灣大學工業工程學研究所。擁有會計與資訊管理雙學位背景，專注於數據科學、作業研究與動態規劃，致力於將複雜數據轉化為商業價值。
+            </p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary" data-zh="查看作品" data-en="View Projects">查看作品</a>
+                <a href="#contact" class="btn btn-secondary" data-zh="聯絡我" data-en="Contact Me">聯絡我</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image fade-in">
+                    <img src="profile-placeholder.jpg" alt="個人照片" id="profile-image">
+                </div>
+                <div class="about-text fade-in">
+                    <h2 data-zh="關於我" data-en="About Me">關於我</h2>
+                    <h3 data-zh="打造卓越的數位體驗" data-en="Crafting Exceptional Digital Experiences">打造卓越的數位體驗</h3>
+                    <p data-zh="我擁有國立成功大學會計學與工業資訊管理雙學位，目前在國立臺灣大學深造工業工程碩士（GPA 4.02/4.3）。我的專業橫跨數據分析、演算法優化與全端開發。"
+                        data-en="I hold a double degree in Accountancy and Industrial & Information Management from NCKU and am currently pursuing my Master's in Industrial Engineering at NTU (GPA 4.02/4.3). My expertise spans data analysis, algorithm optimization, and full-stack development.">
+                        我擁有國立成功大學會計學與工業資訊管理雙學位，目前在國立臺灣大學深造工業工程碩士（GPA 4.02/4.3）。我的專業橫跨數據分析、演算法優化與全端開發。
+                    </p>
+                    <p data-zh="曾於台大決策科學實驗室擔任研究助理，並在 PwC 資誠擔任審計實習生。這些經歷讓我具備結合技術實力與商業邏輯的獨特優勢，能運用 Python、R 與動態規劃解決複雜問題。"
+                        data-en="I have served as a Research Assistant at the NTU Decision Science Lab and an Auditor Intern at PwC. These experiences have equipped me with a unique blend of technical skills and business acumen, enabling me to solve complex problems using Python, R, and Dynamic Programming.">
+                        曾於台大決策科學實驗室擔任研究助理，並在 PwC 資誠擔任審計實習生。這些經歷讓我具備結合技術實力與商業邏輯的獨特優勢，能運用 Python、R 與動態規劃解決複雜問題。
+                    </p>
+                    <p data-zh="在工作之餘，我熱衷於參與 AI 競賽（如 AI CUP 銀牌）與黑客松，持續在數據科學與人工智慧領域精進。"
+                        data-en="Outside of academics, I actively participate in AI competitions (such as winning the Silver Prize at AI CUP) and hackathons, continuously honing my skills in Data Science and AI.">
+                        在工作之餘，我熱衷於參與 AI 競賽（如 AI CUP 銀牌）與黑客松，持續在數據科學與人工智慧領域精進。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title" data-zh="專業技能" data-en="Professional Skills">專業技能</h2>
+                <p class="section-subtitle" data-zh="我的專業領域涵蓋多個開發堆疊，從前端到後端，從設計到開發"
+                    data-en="My expertise spans multiple development stacks, from front-end to back-end, from design to development">
+                    我的專業領域涵蓋多個開發堆疊，從前端到後端，從設計到開發</p>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Skill 1 -->
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h4 data-zh="程式語言" data-en="Programming">程式語言</h4>
+                    <p data-zh="Python (OOP), C++, R, Bash, SQL, Qt Development"
+                        data-en="Python (OOP), C++, R, Bash, SQL, Qt Development">Python (OOP), C++, R, Bash, SQL, Qt
+                        Development</p>
+                </div>
+
+                <!-- Skill 2 -->
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h4 data-zh="數據科學" data-en="Data Science">數據科學</h4>
+                    <p data-zh="Gurobi, SPSS, TEJ, Oracle Crystal Ball, PostgreSQL"
+                        data-en="Gurobi, SPSS, TEJ, Oracle Crystal Ball, PostgreSQL">Gurobi, SPSS, TEJ, Oracle Crystal
+                        Ball, PostgreSQL</p>
+                </div>
+
+                <!-- Skill 3 -->
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h4 data-zh="網頁開發" data-en="Web Development">網頁開發</h4>
+                    <p data-zh="HTML, CSS, JavaScript, jQuery, Bootstrap, Jekyll"
+                        data-en="HTML, CSS, JavaScript, jQuery, Bootstrap, Jekyll">HTML, CSS, JavaScript, jQuery,
+                        Bootstrap, Jekyll</p>
+                </div>
+
+                <!-- Skill 4 -->
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h4 data-zh="研究領域" data-en="Research Areas">研究領域</h4>
+                    <p data-zh="Dynamic Programming, Operations Research, Machine Learning"
+                        data-en="Dynamic Programming, Operations Research, Machine Learning">Dynamic Programming,
+                        Operations Research, Machine Learning</p>
+                </div>
+
+                <!-- Skill 5 -->
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h4 data-zh="商業知識" data-en="Business Domain">商業知識</h4>
+                    <p data-zh="Accounting, Finance, Management Science, Industrial Mgmt"
+                        data-en="Accounting, Finance, Management Science, Industrial Mgmt">Accounting, Finance,
+                        Management Science, Industrial Mgmt</p>
+                </div>
+
+                <!-- Skill 6 -->
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h4 data-zh="語言能力" data-en="Languages">語言能力</h4>
+                    <p data-zh="English (TOEIC 880), Japanese (JLPT N3), Chinese (Native)"
+                        data-en="English (TOEIC 880), Japanese (JLPT N3), Chinese (Native)">English (TOEIC 880),
+                        Japanese (JLPT N3), Chinese (Native)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title" data-zh="作品集" data-en="Portfolio">作品集</h2>
+                <p class="section-subtitle" data-zh="探索我最新的專案作品與創意實踐"
+                    data-en="Explore my latest projects and creative practices">探索我最新的專案作品與創意實踐</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <img src="project1.jpg" alt="投資組合推薦 LINE Bot">
+                    </div>
+                    <div class="project-info">
+                        <h4 data-zh="投資組合推薦 LINE Bot" data-en="Investment Portfolio LINE Bot">投資組合推薦 LINE Bot</h4>
+                        <p data-zh="整合 TEJ 資料庫與 PostgreSQL，運用 PCA 與 AHP 模型進行特徵選取，打造準確率達 59% 的投資預測與推薦系統。"
+                            data-en="Integrated TEJ database with PostgreSQL, using PCA and AHP models for feature selection to build an investment prediction system with 59% accuracy.">
+                            整合 TEJ 資料庫與 PostgreSQL，運用 PCA 與 AHP 模型進行特徵選取，打造準確率達 59% 的投資預測與推薦系統。
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">AHP Model</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            <span data-zh="查看專案" data-en="View Project">查看專案</span> <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <img src="project2.jpg" alt="羽球拍瑕疵檢測 AI">
+                    </div>
+                    <div class="project-info">
+                        <h4 data-zh="羽球拍瑕疵檢測 AI 模型" data-en="Badminton Racket Defect Detection AI">羽球拍瑕疵檢測 AI 模型</h4>
+                        <p data-zh="AI CUP 2025 春季賽銀牌作品。結合 LightGBM 與 CNN 混合模型，應用傅立葉轉換處理不平衡資料，精準識別生產瑕疵。"
+                            data-en="Silver Prize at AI CUP 2025 Spring. Developed a hybrid model (LightGBM + CNN) using Fourier transform for imbalanced data to detect manufacturing defects.">
+                            AI CUP 2025 春季賽銀牌作品。結合 LightGBM 與 CNN 混合模型，應用傅立葉轉換處理不平衡資料，精準識別生產瑕疵。
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Deep Learning</span>
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">LightGBM</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            <span data-zh="查看專案" data-en="View Project">查看專案</span> <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <img src="project3.jpg" alt="動態定價策略研究">
+                    </div>
+                    <div class="project-info">
+                        <h4 data-zh="動態定價策略研究" data-en="Dynamic Pricing Strategy Research">動態定價策略研究</h4>
+                        <p data-zh="於台大決策科學實驗室開發。運用動態規劃 (Dynamic Programming) 與機器學習模擬顧客行為，優化航空業定價策略。"
+                            data-en="Developed at NTU Decision Science Lab. Utilized Dynamic Programming and ML to simulate customer behavior and optimize airline pricing strategies.">
+                            於台大決策科學實驗室開發。運用動態規劃 (Dynamic Programming) 與機器學習模擬顧客行為，優化航空業定價策略。
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Dynamic Programming</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Optimization</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            <span data-zh="查看專案" data-en="View Project">查看專案</span> <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="section-header fade-in">
+                    <h2 class="section-title" data-zh="聯絡我" data-en="Contact Me">聯絡我</h2>
+                    <p class="section-subtitle" data-zh="有任何專案想法或合作機會？歡迎隨時與我聯繫！"
+                        data-en="Have a project idea or collaboration opportunity? Feel free to reach out!">
+                        有任何專案想法或合作機會？歡迎隨時與我聯繫！</p>
+                </div>
+
+                <div class="contact-info">
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4>Email</h4>
+                        <a href="mailto:hungta.wang0118@gmail.com">hungta.wang0118@gmail.com</a>
+                    </div>
+
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4>電話</h4>
+                        <a href="tel:+886939815932">+886 939 815 932</a>
+                    </div>
+                </div>
+
+                <div class="social-links fade-in">
+                    <a href="https://github.com/yourusername" class="social-link" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/yourusername" class="social-link" target="_blank"
+                        aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Your Name. All rights reserved.</p>
+                <p>Designed with <i class="fas fa-heart" style="color: #f093fb;"></i> and crafted with precision</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
