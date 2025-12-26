@@ -25,7 +25,7 @@ const Hero = () => {
                         {t.description}
                     </p>
                     <div className="cta-buttons" style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-                        <Link to="/projects" className="btn btn-primary">{t.viewProjects}</Link>
+                        <Link to="https://hungtawang.github.io/" className="btn btn-primary">{t.viewProjects}</Link>
                         <Link to="/contact" className="btn btn-secondary">{t.contactMe}</Link>
                     </div>
                 </div>

@@ -477,7 +477,7 @@ section {
    About Section
    =================================== */
 .about {
-    background-color: var(--color-bg-secondary);
+    background-color: var(--color-bg);
 }
 
 .about .container {

@@ -37,10 +37,10 @@ const Contact = () => {
                     </div>
 
                     <div className="social-links" style={{ display: 'flex', justifyContent: 'center', gap: '2rem' }}>
-                        <a href="https://github.com/hungtawang0118" className="social-link" target="_blank" aria-label="GitHub" style={{ padding: '1rem', background: 'var(--color-bg-glass)', borderRadius: '50%', border: '1px solid var(--color-border)', color: 'var(--color-text)', display: 'flex', transition: 'all 0.3s ease' }}>
+                        <a href="https://github.com/HungTaWang" className="social-link" target="_blank" aria-label="GitHub" style={{ padding: '1rem', background: 'var(--color-bg-glass)', borderRadius: '50%', border: '1px solid var(--color-border)', color: 'var(--color-text)', display: 'flex', transition: 'all 0.3s ease' }}>
                             <Github size={32} />
                         </a>
-                        <a href="https://linkedin.com/in/yourusername" className="social-link" target="_blank" aria-label="LinkedIn" style={{ padding: '1rem', background: 'var(--color-bg-glass)', borderRadius: '50%', border: '1px solid var(--color-border)', color: 'var(--color-text)', display: 'flex', transition: 'all 0.3s ease' }}>
+                        <a href="https://www.linkedin.com/in/hungtawang/" className="social-link" target="_blank" aria-label="LinkedIn" style={{ padding: '1rem', background: 'var(--color-bg-glass)', borderRadius: '50%', border: '1px solid var(--color-border)', color: 'var(--color-text)', display: 'flex', transition: 'all 0.3s ease' }}>
                             <Linkedin size={32} />
                         </a>
                     </div>

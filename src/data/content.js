@@ -12,15 +12,15 @@ export const content = {
       name: "王泓達",
       subtitle: "國立臺灣大學工業工程學研究所 碩士生",
       description: "國立成功大學會計學系、工業與資訊管理學系雙學位",
-      viewProjects: "查看作品",
+      viewProjects: "我的貼文",
       contactMe: "聯絡我"
     },
     about: {
       title: "關於我",
-      subtitle: "打造卓越的數位體驗",
-      text1: "我擁有國立成功大學會計學與工業資訊管理雙學位，目前在國立臺灣大學深造工業工程碩士（GPA 4.02/4.3）。我的專業橫跨數據分析、演算法優化與全端開發。",
-      text2: "曾於台大決策科學實驗室擔任研究助理，並在 PwC 資誠擔任審計實習生。這些經歷讓我具備結合技術實力與商業邏輯的獨特優勢，能運用 Python、R 與動態規劃解決複雜問題。",
-      text3: "在工作之餘，我熱衷於參與 AI 競賽（如 AI CUP 銀牌）與黑客松，持續在數據科學與人工智慧領域精進。"
+      subtitle: "對知識充滿熱忱的跨領域學習者",
+      text1: "我是王泓達，擁有國立成功大學會計學與工業資訊管理雙學士學位，目前於國立臺灣大學工業工程學研究所攻讀碩士。會計背景培養了我縝密的問題解決能力與對商業運作的深刻理解，而工資管的訓練則結合了工業實務與資訊管理，使我能將規劃轉化為具體成果。目前在台大決策科學實驗室研究動態定價，專注於馬可夫決策過程、動態規劃、時間序列分析與深度神經網絡等方法。",
+      text2: "除了學術知識，我也致力於將理論應用於解決實際問題。大學時期，我曾帶領團隊在成大商管競賽中以 AKB48 海外拓展策略獲得冠軍。碩士期間，我參加了中華郵政大數據競賽，並獲得創意獎與 Galaxy Software Services 特別獎。我們的專案利用時間序列分析與非線性規劃優化郵筒設置，預期能為新設點帶來 7.5 倍的營收增長。",
+      text3: "我期許自己能在團隊中扮演積極與激勵的角色，透過跨部門協作激發創意。憑藉我的分析專業與人際溝通能力，我有信心能帶來嶄新觀點、推動創新並提升團隊績效。我相信，堅持不懈與清晰的思維是追求卓越與持續自我精進的關鍵。"
     },
     skills: {
       title: "專業技能",
@@ -84,15 +84,15 @@ export const content = {
       name: "Hung-Ta Wang",
       subtitle: "Institute of Industrial Engineering (M.S.) Student",
       description: "Double degree in Accounting(B.B.A) & Industrial and Information Management(B.M.S) at National Cheng Kung University",
-      viewProjects: "View Projects",
+      viewProjects: "View My Posts",
       contactMe: "Contact Me"
     },
     about: {
       title: "About Me",
-      subtitle: "Crafting Exceptional Digital Experiences",
-      text1: "I hold a double degree in Accountancy and Industrial & Information Management from NCKU and am currently pursuing my Master's in Industrial Engineering at NTU (GPA 4.02/4.3). My expertise spans data analysis, algorithm optimization, and full-stack development.",
-      text2: "I have served as a Research Assistant at the NTU Decision Science Lab and an Auditor Intern at PwC. These experiences have equipped me with a unique blend of technical skills and business acumen, enabling me to solve complex problems using Python, R, and Dynamic Programming.",
-      text3: "Outside of academics, I actively participate in AI competitions (such as winning the Silver Prize at AI CUP) and hackathons, continuously honing my skills in Data Science and AI."
+      subtitle: "I am a passionate interdisciplinary learner",
+      text1: "I am Hung-Ta Wang. I hold dual bachelor’s degrees in Accounting and Industrial and Information Management from National Cheng Kung University (NCKU), and I am currently pursuing a master’s degree in Industrial Engineering at National Taiwan University (NTU). My undergraduate training in accounting has instilled in me a meticulous approach to problem-solving and a solid understanding of business operations. At NTU, I am conducting research on dynamic pricing at the Decision Science Laboratory, focusing on methodologies such as Markov Decision Processes, Dynamic Programming, Time Series Analysis, and Deep Neural Networks.",
+      text2: "Beyond academic knowledge, I have applied theoretical frameworks to real-world challenges. During my undergraduate studies, my team won the championship in the NCKU Business Competition. As a master’s student, I competed in the Chunghwa Post Co., Ltd. Big Data Competition, winning the Creativity Award and Special Award. Our project centered on using Time Series Analysis and Nonlinear Programming to optimize mailbox placement, achieving a projected revenue growth of 7.5 times.",
+      text3: "I aspire to play a positive and motivating role within a team, fostering creativity through collaboration. With my expertise in analytics and strong interpersonal communication skills, I am confident in my ability to bring fresh perspectives, drive innovation, and enhance overall team performance. I believe that persistence and clarity of thought are key to achieving excellence and continuous self-improvement."
     },
     skills: {
       title: "Professional Skills",
