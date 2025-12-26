@@ -418,7 +418,7 @@ section {
 
 .container {
     max-width: 1200px;
-    margin: -5vh auto 0;
+    margin: 0 auto; /* Removed -5vh to prevent overlapping navbar */
     width: 100%;
     max-height: 100%;
     display: flex;
@@ -557,7 +557,10 @@ section {
 }
 
 .skill-card:hover {
-  background-color: rgba(128, 128, 128, 0.1);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: var(--shadow-md);
+  background-color: rgba(139, 92, 246, 0.1); /* Subtle primary tint */
+  border-color: var(--color-primary);
 }
 
 /* Animations */

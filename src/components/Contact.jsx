@@ -18,30 +18,30 @@ const Contact = () => {
                         <p className="section-subtitle">{t.subtitle}</p>
                     </div>
 
-                    <div className="contact-info">
-                        <div className="contact-item">
-                            <div className="contact-icon">
-                                <Mail size={24} />
+                    <div className="contact-info" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem', marginBottom: '3rem' }}>
+                        <div className="antigravity-card contact-card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+                            <div className="contact-icon" style={{ marginBottom: '1rem', color: 'var(--color-primary)' }}>
+                                <Mail size={40} />
                             </div>
-                            <h4>Email</h4>
-                            <a href={`mailto:${t.email}`}>{t.email}</a>
+                            <h4 style={{ marginBottom: '0.5rem', fontSize: '1.25rem' }}>Email</h4>
+                            <a href={`mailto:${t.email}`} style={{ color: 'var(--color-text-secondary)', textDecoration: 'none', fontSize: '1.1rem' }}>{t.email}</a>
                         </div>
 
-                        <div className="contact-item">
-                            <div className="contact-icon">
-                                <Phone size={24} />
+                        <div className="antigravity-card contact-card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+                            <div className="contact-icon" style={{ marginBottom: '1rem', color: 'var(--color-primary)' }}>
+                                <Phone size={40} />
                             </div>
-                            <h4>{language === 'zh' ? '電話' : 'Phone'}</h4>
-                            <a href={`tel:${t.phone}`}>{t.phone}</a>
+                            <h4 style={{ marginBottom: '0.5rem', fontSize: '1.25rem' }}>{language === 'zh' ? '電話' : 'Phone'}</h4>
+                            <a href={`tel:${t.phone}`} style={{ color: 'var(--color-text-secondary)', textDecoration: 'none', fontSize: '1.1rem' }}>{t.phone}</a>
                         </div>
                     </div>
 
-                    <div className="social-links">
-                        <a href="https://github.com/hungtawang0118" className="social-link" target="_blank" aria-label="GitHub">
-                            <Github size={24} />
+                    <div className="social-links" style={{ display: 'flex', justifyContent: 'center', gap: '2rem' }}>
+                        <a href="https://github.com/hungtawang0118" className="social-link" target="_blank" aria-label="GitHub" style={{ padding: '1rem', background: 'var(--color-bg-glass)', borderRadius: '50%', border: '1px solid var(--color-border)', color: 'var(--color-text)', display: 'flex', transition: 'all 0.3s ease' }}>
+                            <Github size={32} />
                         </a>
-                        <a href="https://linkedin.com/in/yourusername" className="social-link" target="_blank" aria-label="LinkedIn">
-                            <Linkedin size={24} />
+                        <a href="https://linkedin.com/in/yourusername" className="social-link" target="_blank" aria-label="LinkedIn" style={{ padding: '1rem', background: 'var(--color-bg-glass)', borderRadius: '50%', border: '1px solid var(--color-border)', color: 'var(--color-text)', display: 'flex', transition: 'all 0.3s ease' }}>
+                            <Linkedin size={32} />
                         </a>
                     </div>
                 </div>
