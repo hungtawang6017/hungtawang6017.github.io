@@ -45,7 +45,8 @@ const Projects = () => {
                             className="antigravity-card project-card" 
                             key={index} 
                             style={{ 
-                                padding: '0', 
+                                // padding: '0rem', 
+                                padding: '0rem, 0.5rem, 2rem, 0.5rem',
                                 overflow: 'hidden', 
                                 border: '1px solid var(--border-color)',
                                 transition: 'transform 0.4s ease, box-shadow 0.4s ease' // Ensure hover works

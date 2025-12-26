@@ -17,7 +17,7 @@ const Navbar = () => {
     return (
         <nav className="navbar" id="navbar">
             <div className="nav-container glass-pill">
-                <NavLink to="/" className="nav-logo">Portfolio</NavLink>
+                <NavLink to="/" className="nav-logo" style={{fontSize: '1.7rem'}}>Home of Hung-Ta</NavLink>
 
                 <button 
                     className="mobile-menu-toggle" 
@@ -28,11 +28,11 @@ const Navbar = () => {
                 </button>
 
                 <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`} id="nav-menu">
-                    <li><NavLink to="/" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} onClick={() => setIsMenuOpen(false)} end>{t.home}</NavLink></li>
-                    <li><NavLink to="/about" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} onClick={() => setIsMenuOpen(false)}>{t.about}</NavLink></li>
-                    <li><NavLink to="/skills" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} onClick={() => setIsMenuOpen(false)}>{t.skills}</NavLink></li>
-                    <li><NavLink to="/projects" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} onClick={() => setIsMenuOpen(false)}>{t.projects}</NavLink></li>
-                    <li><NavLink to="/contact" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} onClick={() => setIsMenuOpen(false)}>{t.contact}</NavLink></li>
+                    <li><a href="#home" className="nav-link" onClick={() => setIsMenuOpen(false)}>{t.home}</a></li>
+                    <li><a href="#about" className="nav-link" onClick={() => setIsMenuOpen(false)}>{t.about}</a></li>
+                    <li><a href="#skills" className="nav-link" onClick={() => setIsMenuOpen(false)}>{t.skills}</a></li>
+                    <li><a href="#projects" className="nav-link" onClick={() => setIsMenuOpen(false)}>{t.projects}</a></li>
+                    <li><a href="#contact" className="nav-link" onClick={() => setIsMenuOpen(false)}>{t.contact}</a></li>
                     <li className="nav-divider"></li>
                     <li className="nav-actions">
                         <button onClick={toggleLanguage} className="theme-toggle" aria-label="Toggle language">

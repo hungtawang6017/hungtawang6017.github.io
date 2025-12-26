@@ -11,12 +11,7 @@ const Footer = () => {
         <footer>
             <div className="container">
                 <div className="footer-content">
-                    <p>{t.copyright}</p>
-                    <p>
-                        {t.designedWith} 
-                        <Heart size={16} fill="#f093fb" color="#f093fb" style={{ display: 'inline', margin: '0 4px' }} /> 
-                        and crafted with precision
-                    </p>
+                    <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>{t.copyright}</p>
                 </div>
             </div>
         </footer>

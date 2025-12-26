@@ -10,8 +10,8 @@ export const content = {
     hero: {
       greeting: "嗨，我是 ",
       name: "王泓達",
-      subtitle: "工業工程碩士生 · 數據分析師 · 全端開發者",
-      description: "目前就讀於國立臺灣大學工業工程學研究所。擁有會計與資訊管理雙學位背景，專注於數據科學、作業研究與動態規劃，致力於將複雜數據轉化為商業價值。",
+      subtitle: "國立臺灣大學工業工程學研究所 碩士生",
+      description: "國立成功大學會計學系、工業與資訊管理學系雙學位",
       viewProjects: "查看作品",
       contactMe: "聯絡我"
     },
@@ -63,13 +63,12 @@ export const content = {
     },
     contact: {
       title: "聯絡我",
-      subtitle: "有任何專案想法或合作機會？歡迎隨時與我聯繫！",
+      subtitle: "歡迎隨時與我聯繫！",
       email: "hungta.wang0118@gmail.com",
       phone: "+886 939 815 932"
     },
     footer: {
       copyright: "© 2025 Hung-Ta Wang. All rights reserved.",
-      designedWith: "Designed with "
     }
   },
   en: {
@@ -83,8 +82,8 @@ export const content = {
     hero: {
       greeting: "Hi, I'm ",
       name: "Hung-Ta Wang",
-      subtitle: "Industrial Engineering M.S. Student · Data Analyst · Full Stack Developer",
-      description: "Currently pursuing an M.S. in Industrial Engineering at NTU. With a double degree in Accounting and Information Management, I specialize in Data Science, Operations Research, and Dynamic Programming, dedicated to transforming complex data into business value.",
+      subtitle: "Institute of Industrial Engineering (M.S.) Student",
+      description: "Double degree in Accounting(B.B.A) & Industrial and Information Management(B.M.S) at National Cheng Kung University",
       viewProjects: "View Projects",
       contactMe: "Contact Me"
     },
@@ -136,13 +135,12 @@ export const content = {
     },
     contact: {
       title: "Contact Me",
-      subtitle: "Have a project idea or collaboration opportunity? Feel free to reach out!",
+      subtitle: "Feel free to contact me!",
       email: "hungta.wang0118@gmail.com",
       phone: "+886 939 815 932"
     },
     footer: {
       copyright: "© 2025 Hung-Ta Wang. All rights reserved.",
-      designedWith: "Designed with "
     }
   }
 };

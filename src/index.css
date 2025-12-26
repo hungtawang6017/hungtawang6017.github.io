@@ -66,7 +66,7 @@
     --color-text-secondary: #64748b;
     --color-border: rgba(0, 0, 0, 0.1);
     
-    --gradient-hero: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 100%);
+    --gradient-hero: linear-gradient(135deg, #e0e7ff 0%, #f9f4fd 100%);
     --gradient-primary: linear-gradient(135deg, #7c3aed 0%, #06b6d4 100%);
     
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -341,7 +341,7 @@ a:hover {
 
 .text-gradient {
     color: #4357d3 !important;
-    background: linear-gradient(135deg, #4357d3 0%, #3b82f6 30%, #60a5fa 60%, #93c5fd 100%) !important;
+    background: linear-gradient(135deg, #394bc3 0%, #2a6edc 30%, #4c93e9 60%, #5ea1ee 100%) !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
     background-clip: text !important;
@@ -393,8 +393,33 @@ a:hover {
 
 .btn-secondary:hover {
     background: rgba(255, 255, 255, 0.25);
-    border-color: rgba(255, 255, 255, 0.5);
+    border-color: rgba(255, 255, 255, 0.8);
     transform: translateY(-2px);
+}
+
+/* Light Mode Button Visibility Update */
+[data-theme="light"] .btn-secondary {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    background: rgba(139, 92, 246, 0.05);
+}
+
+[data-theme="light"] .btn-secondary:hover {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+[data-theme="dark"] .btn-secondary {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    background: rgba(139, 92, 246, 0.05);
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
 }
 
 /* ===================================
@@ -479,15 +504,16 @@ section {
 
 .about-image img {
     width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: var(--border-radius-xl);
-    box-shadow: var(--shadow-xl);
-    transition: transform var(--transition-slow);
+    height: 100%; /* Ensure full height */
+    object-fit: cover; /* Prevent distortion and cover gaps */
+    /* Border radius matches container, though overflow hidden handles it */
+    border-radius: var(--border-radius-xl); 
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth easing */
 }
 
 .about-image img:hover {
-    transform: scale(1.02) rotate(1deg);
+    transform: scale(1.1); /* Zoom only, no movement to prevent gaps */
+    /* Shadow is handled by the container */
 }
 
 .about-text {
@@ -590,8 +616,10 @@ section {
 section {
   padding: 6rem 0;
   position: relative;
+  scroll-margin-top: 100px; /* Offset for fixed navbar */
 }
 
+/* Antigravity Card Style */
 /* Antigravity Card Style */
 .antigravity-card {
   background: var(--bg-secondary);
@@ -599,11 +627,32 @@ section {
   padding: 2.5rem;
   border: 1px solid var(--border-color);
   transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease;
+  position: relative; /* Needed for ::before */
+  overflow: hidden; /* Ensure line stays inside */
+}
+
+.antigravity-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-normal);
+}
+
+.antigravity-card:hover::before {
+    transform: scaleX(1);
 }
 
 .antigravity-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: var(--shadow-xl);
+  background-color: rgba(139, 92, 246, 0.1); /* Antigravity purple tint */
+  border-color: var(--color-primary);
 }
 
 /* Responsive About Section Override */
@@ -715,7 +764,7 @@ section {
     top: calc(100% + 10px);
     left: 1rem;
     right: 1rem;
-    background: var(--color-bg-glass); /* Use glass background */
+    background: var(--color-bg); /* Use glass background */
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-radius: var(--border-radius-lg);
@@ -771,8 +820,40 @@ section {
     }
 
     .hero {
-        min-height: 100vh;
-        padding: var(--spacing-md) var(--spacing-sm);
+        min-height: auto; /* Let content dictate height */
+        padding-top: 100px; /* Standard navbar clearance */
+        padding-bottom: 3rem;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-content {
+        padding: 0;
+        width: 100%;
+    }
+
+    .hero-subtitle {
+        font-size: 1.25rem; /* Slightly smaller for mobile fit */
+        line-height: 1.6;
+        margin-bottom: 2rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        line-height: 1.8; /* More breathing room for text */
+        padding: 0 0.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    /* Ensure buttons have space */
+    .cta-buttons {
+        gap: 1rem;
+        width: 100%;
+        padding: 0 1rem;
     }
 
     .nav-container {

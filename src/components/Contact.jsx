@@ -19,21 +19,21 @@ const Contact = () => {
                     </div>
 
                     <div className="contact-info" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem', marginBottom: '3rem' }}>
-                        <div className="antigravity-card contact-card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+                        <a href={`mailto:${t.email}`} className="antigravity-card contact-card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
                             <div className="contact-icon" style={{ marginBottom: '1rem', color: 'var(--color-primary)' }}>
                                 <Mail size={40} />
                             </div>
-                            <h4 style={{ marginBottom: '0.5rem', fontSize: '1.25rem' }}>Email</h4>
-                            <a href={`mailto:${t.email}`} style={{ color: 'var(--color-text-secondary)', textDecoration: 'none', fontSize: '1.1rem' }}>{t.email}</a>
-                        </div>
+                            <h4 style={{ marginBottom: '0.5rem', fontSize: '1.25rem', color: 'var(--color-text)' }}>Email</h4>
+                            <span style={{ color: 'var(--color-text-secondary)', fontSize: '1.1rem' }}>{t.email}</span>
+                        </a>
 
-                        <div className="antigravity-card contact-card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+                        <a href={`tel:${t.phone}`} className="antigravity-card contact-card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
                             <div className="contact-icon" style={{ marginBottom: '1rem', color: 'var(--color-primary)' }}>
                                 <Phone size={40} />
                             </div>
-                            <h4 style={{ marginBottom: '0.5rem', fontSize: '1.25rem' }}>{language === 'zh' ? '電話' : 'Phone'}</h4>
-                            <a href={`tel:${t.phone}`} style={{ color: 'var(--color-text-secondary)', textDecoration: 'none', fontSize: '1.1rem' }}>{t.phone}</a>
-                        </div>
+                            <h4 style={{ marginBottom: '0.5rem', fontSize: '1.25rem', color: 'var(--color-text)' }}>{language === 'zh' ? '電話' : 'Phone'}</h4>
+                            <span style={{ color: 'var(--color-text-secondary)', fontSize: '1.1rem' }}>{t.phone}</span>
+                        </a>
                     </div>
 
                     <div className="social-links" style={{ display: 'flex', justifyContent: 'center', gap: '2rem' }}>
