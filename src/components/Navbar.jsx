@@ -17,7 +17,7 @@ const Navbar = () => {
     return (
         <nav className="navbar" id="navbar">
             <div className="nav-container glass-pill">
-                <NavLink to="/" className="nav-logo" style={{fontSize: '1.7rem'}}>Home of Hung-Ta</NavLink>
+                <a href="#home" className="nav-logo" style={{fontSize: '1.7rem'}}>Home of Hung-Ta</a>
 
                 <button 
                     className="mobile-menu-toggle" 
