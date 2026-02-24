@@ -11,30 +11,38 @@
    =================================== */
 :root {
     /* Colors - Antigravity Theme (Dark/Neon) */
-    --color-primary: #8b5cf6; /* Violet */
+    --color-primary: #8b5cf6;
+    /* Violet */
     --color-primary-dark: #7c3aed;
-    --color-secondary: #06b6d4; /* Cyan */
-    --color-accent: #f472b6; /* Pink */
-    
+    --color-secondary: #06b6d4;
+    /* Cyan */
+    --color-accent: #f472b6;
+    /* Pink */
+
     /* Backgrounds */
-    --color-bg: #0f172a; /* Slate 900 */
-    --color-bg-secondary: #1e293b; /* Slate 800 */
-    --color-bg-glass: rgba(15, 23, 42, 0.85); /* Dark Glass */
-    
+    --color-bg: #0f172a;
+    /* Slate 900 */
+    --color-bg-secondary: #1e293b;
+    /* Slate 800 */
+    --color-bg-glass: rgba(15, 23, 42, 0.85);
+    /* Dark Glass */
+
     /* Text */
-    --color-text: #f8fafc; /* Slate 50 */
-    --color-text-secondary: #94a3b8; /* Slate 400 */
+    --color-text: #f8fafc;
+    /* Slate 50 */
+    --color-text-secondary: #94a3b8;
+    /* Slate 400 */
     --color-border: rgba(255, 255, 255, 0.1);
 
     /* Gradients */
-    --gradient-hero: radial-gradient(circle at 50% 50%, #111a2f 0%, #111a2f 100%);
+    --gradient-hero: var(--color-bg);
     --gradient-primary: linear-gradient(135deg, #a78bfa 0%, #38bdf8 100%);
-    
+
     /* Shadows */
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
     --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.3);
     --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.4);
-    
+
     /* Spacing */
     --spacing-xs: 0.75rem;
     --spacing-sm: 1.25rem;
@@ -65,10 +73,10 @@
     --color-text: #0f172a;
     --color-text-secondary: #64748b;
     --color-border: rgba(0, 0, 0, 0.1);
-    
-    --gradient-hero: linear-gradient(135deg, #e0e7ff 0%, #f9f4fd 100%);
+
+    --gradient-hero: var(--color-bg);
     --gradient-primary: linear-gradient(135deg, #7c3aed 0%, #06b6d4 100%);
-    
+
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
     --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
@@ -169,7 +177,7 @@ a:hover {
     background-color: var(--color-bg-glass);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
     padding: var(--spacing-sm) 0;
     transition: all var(--transition-normal);
 }
@@ -352,7 +360,7 @@ a:hover {
 /* ... existing code ... */
 
 /* Mobile Menu */
-/* (Moved to media query below) */ 
+/* (Moved to media query below) */
 .cta-buttons {
     display: flex;
     gap: var(--spacing-sm);
@@ -443,7 +451,8 @@ section {
 
 .container {
     max-width: 1200px;
-    margin: 0 auto; /* Removed -5vh to prevent overlapping navbar */
+    margin: 0 auto;
+    /* Removed -5vh to prevent overlapping navbar */
     width: 100%;
     max-height: 100%;
     display: flex;
@@ -504,15 +513,19 @@ section {
 
 .about-image img {
     width: 100%;
-    height: 100%; /* Ensure full height */
-    object-fit: cover; /* Prevent distortion and cover gaps */
+    height: 100%;
+    /* Ensure full height */
+    object-fit: cover;
+    /* Prevent distortion and cover gaps */
     /* Border radius matches container, though overflow hidden handles it */
-    border-radius: var(--border-radius-xl); 
-    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth easing */
+    border-radius: var(--border-radius-xl);
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    /* Smooth easing */
 }
 
 .about-image img:hover {
-    transform: scale(1.1); /* Zoom only, no movement to prevent gaps */
+    transform: scale(1.1);
+    /* Zoom only, no movement to prevent gaps */
     /* Shadow is handled by the container */
 }
 
@@ -583,16 +596,17 @@ section {
 }
 
 .skill-card:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: var(--shadow-md);
-  background-color: rgba(139, 92, 246, 0.1); /* Subtle primary tint */
-  border-color: var(--color-primary);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: var(--shadow-md);
+    background-color: rgba(139, 92, 246, 0.1);
+    /* Subtle primary tint */
+    border-color: var(--color-primary);
 }
 
 /* Animations */
 .fade-in {
-  animation: fadeIn 0.8s ease-out forwards;
-  opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+    opacity: 0;
 }
 
 .reveal-on-scroll {
@@ -608,27 +622,37 @@ section {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Component Placeholders (Will be specific in JSX) */
 section {
-  padding: 6rem 0;
-  position: relative;
-  scroll-margin-top: 100px; /* Offset for fixed navbar */
+    padding: 6rem 0;
+    position: relative;
+    scroll-margin-top: 100px;
+    /* Offset for fixed navbar */
 }
 
 /* Antigravity Card Style */
 /* Antigravity Card Style */
 .antigravity-card {
-  background: var(--bg-secondary);
-  border-radius: var(--radius-xl);
-  padding: 2.5rem;
-  border: 1px solid var(--border-color);
-  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease;
-  position: relative; /* Needed for ::before */
-  overflow: hidden; /* Ensure line stays inside */
+    background: var(--bg-secondary);
+    border-radius: var(--radius-xl);
+    padding: 2.5rem;
+    border: 1px solid var(--border-color);
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease;
+    position: relative;
+    /* Needed for ::before */
+    overflow: hidden;
+    /* Ensure line stays inside */
 }
 
 .antigravity-card::before {
@@ -649,91 +673,103 @@ section {
 }
 
 .antigravity-card:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: var(--shadow-xl);
-  background-color: rgba(139, 92, 246, 0.1); /* Antigravity purple tint */
-  border-color: var(--color-primary);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: var(--shadow-xl);
+    background-color: rgba(139, 92, 246, 0.1);
+    /* Antigravity purple tint */
+    border-color: var(--color-primary);
 }
 
 /* Responsive About Section Override */
 @media (max-width: 900px) {
-  .about-content {
-    grid-template-columns: 1fr !important;
-    text-align: center;
-  }
-  .about-text h2, .about-text h3 {
-    text-align: center;
-  }
+    .about-content {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+    }
+
+    .about-text h2,
+    .about-text h3 {
+        text-align: center;
+    }
 }
 
 /* Navbar - Floating Pill */
 /* Navbar - Full Width */
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 0; /* Remove padding to stretch full width */
-  z-index: 1000;
-  pointer-events: auto; /* Allow interaction */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    /* Remove padding to stretch full width */
+    z-index: 1000;
+    pointer-events: auto;
+    /* Allow interaction */
 }
 
 /* ... existing code ... */
 
 .nav-container.glass-pill {
-  pointer-events: auto;
-  max-width: 100% !important; /* Full width */
-  margin: 0;
-  background: var(--color-bg-glass); /* Match theme glass background */
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  padding: 1rem 2rem; /* Comfortable internal spacing */
-  border-radius: 0; /* No rounded corners */
-  border-bottom: 1px solid var(--color-border); /* Bottom border only */
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  box-shadow: var(--shadow-sm);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    pointer-events: auto;
+    max-width: 100% !important;
+    /* Full width */
+    margin: 0;
+    background: var(--color-bg-glass);
+    /* Match theme glass background */
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 1rem 2rem;
+    /* Comfortable internal spacing */
+    border-radius: 0;
+    /* No rounded corners */
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+    /* Bottom border only */
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 [data-theme='dark'] .nav-container.glass-pill {
-  background: rgba(15, 23, 42, 0.85); /* Matches --color-bg-glass */
+    background: rgba(15, 23, 42, 0.85);
+    /* Matches --color-bg-glass */
 }
 
 .nav-menu {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
 }
 
 .nav-actions {
-  display: flex;
-  gap: 0.5rem;
-  padding-left: 1rem;
-  border-left: 1px solid var(--border-color);
+    display: flex;
+    gap: 0.5rem;
+    padding-left: 1rem;
+    border-left: 1px solid var(--border-color);
 }
 
 .nav-link {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-secondary);
 }
 
 .nav-link:hover {
-  color: var(--accent-color);
+    color: var(--accent-color);
 }
 
 .nav-logo {
-  font-weight: 700;
-  font-size: 1.25rem;
+    font-weight: 700;
+    font-size: 1.25rem;
 }
 
 .mobile-menu-toggle {
-    display: none; /* Hidden by default on desktop */
+    display: none;
+    /* Hidden by default on desktop */
     background: none;
     border: none;
     cursor: pointer;
@@ -742,55 +778,57 @@ section {
 
 /* Responsive Navbar */
 @media (max-width: 768px) {
-  .navbar {
-    padding: 1rem;
-  }
-  
-  /* Responsive Spacing utility */
-  section {
-    padding: 4rem 0;
-  }
-  
-  .nav-container.glass-pill {
-    padding: 0.75rem 1.5rem;
-  }
+    .navbar {
+        padding: 1rem;
+    }
 
-  .mobile-menu-toggle {
-      display: block;
-  }
+    /* Responsive Spacing utility */
+    section {
+        padding: 4rem 0;
+    }
 
-  .nav-menu {
-    position: absolute;
-    top: calc(100% + 10px);
-    left: 1rem;
-    right: 1rem;
-    background: var(--color-bg); /* Use glass background */
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-radius: var(--border-radius-lg);
-    padding: 2rem;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid var(--color-border);
-    box-shadow: var(--shadow-lg);
-    z-index: 1001;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-  }
+    .nav-container.glass-pill {
+        padding: 0.75rem 1.5rem;
+    }
 
-  .nav-menu.active {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
-  }
+    .mobile-menu-toggle {
+        display: block;
+    }
 
-  .nav-actions {
-      border-left: none;
-      padding-left: 0;
-      margin-top: 1rem;
-  }
+    .nav-menu {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 1rem;
+        right: 1rem;
+        background: var(--color-bg);
+        /* Use glass background */
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-radius: var(--border-radius-lg);
+        padding: 2rem;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid var(--color-border);
+        box-shadow: var(--shadow-lg);
+        z-index: 1001;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+    }
+
+    .nav-menu.active {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    .nav-actions {
+        border-left: none;
+        padding-left: 0;
+        margin-top: 1rem;
+    }
+
     .cta-buttons {
         flex-direction: column;
         align-items: center;
@@ -820,8 +858,10 @@ section {
     }
 
     .hero {
-        min-height: auto; /* Let content dictate height */
-        padding-top: 100px; /* Standard navbar clearance */
+        min-height: auto;
+        /* Let content dictate height */
+        padding-top: 100px;
+        /* Standard navbar clearance */
         padding-bottom: 3rem;
         padding-left: 1.25rem;
         padding-right: 1.25rem;
@@ -837,14 +877,16 @@ section {
     }
 
     .hero-subtitle {
-        font-size: 1.25rem; /* Slightly smaller for mobile fit */
+        font-size: 1.25rem;
+        /* Slightly smaller for mobile fit */
         line-height: 1.6;
         margin-bottom: 2rem;
     }
 
     .hero-description {
         font-size: 1rem;
-        line-height: 1.8; /* More breathing room for text */
+        line-height: 1.8;
+        /* More breathing room for text */
         padding: 0 0.5rem;
         margin-bottom: 2.5rem;
     }

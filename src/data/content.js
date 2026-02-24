@@ -11,7 +11,7 @@ export const content = {
       greeting: "嗨，我是 ",
       name: "王泓達",
       subtitle: "國立臺灣大學工業工程學研究所 碩士生",
-      description: "國立成功大學會計學系、工業與資訊管理學系雙學位",
+      description: "國立成功大學會計學系、工業與資訊管理學系雙學位學士",
       viewProjects: "我的貼文",
       contactMe: "聯絡我"
     },
@@ -26,12 +26,12 @@ export const content = {
       title: "專業技能",
       subtitle: "我的專業領域涵蓋多個開發堆疊，從前端到後端，從設計到開發",
       items: [
-        { title: "程式語言", desc: "Python (OOP), C++, R, Bash, SQL, Qt Development", icon: "code" },
-        { title: "數據科學", desc: "Gurobi, SPSS, TEJ, Oracle Crystal Ball, PostgreSQL", icon: "chart-bar" },
-        { title: "網頁開發", desc: "HTML, CSS, JavaScript, jQuery, Bootstrap, Jekyll", icon: "laptop-code" },
-        { title: "研究領域", desc: "Dynamic Programming, Operations Research, Machine Learning", icon: "brain" },
-        { title: "商業知識", desc: "Accounting, Finance, Management Science, Industrial Mgmt", icon: "briefcase" },
-        { title: "語言能力", desc: "English (TOEIC 880), Japanese (JLPT N3), Chinese (Native)", icon: "language" }
+        { title: "程式設計", desc: "Python, C++, Gurobi, Qt Development, Linux", icon: "code" },
+        { title: "數據科學", desc: "R, SQL, SPSS, TEJ, Oracle Crystal Ball", icon: "chart-bar" },
+        { title: "網頁開發", desc: "Node.js, Jekyll, HTML, CSS, JavaScript, jQuery, Bootstrap", icon: "laptop-code" },
+        { title: "學術研究", desc: "動態規劃, 深度學習", icon: "brain" },
+        { title: "財務管理", desc: "財務會計, 財務報表分析, 衍生性金融商品", icon: "briefcase" },
+        { title: "語言能力", desc: "英語 (TOEIC 880), 日語 (JLPT N3), 德語 (入門),韓語 (入門)", icon: "language" }
       ]
     },
     projects: {
@@ -42,7 +42,7 @@ export const content = {
           title: "投資組合推薦 LINE Bot",
           desc: "整合 TEJ 資料庫與 PostgreSQL，運用 PCA 與 AHP 模型進行特徵選取，打造準確率達 59% 的投資預測與推薦系統。",
           tags: ["Python", "SQL", "AHP Model"],
-          image: "/images/project1.jpg", 
+          image: "/images/project1.jpg",
           linkText: "查看專案"
         },
         {
