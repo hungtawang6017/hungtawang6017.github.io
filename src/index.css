@@ -1,13 +1,33 @@
-/* ===================================
-   Personal Portfolio Website
-   Apple & AWS Inspired Design
-   =================================== */
+/* ============================================================
+   index.css — 個人作品集網站全域樣式表
+   設計風格：Antigravity（類 Google Antigravity 深色 + 霓虹漸層）
+
+   目錄：
+     1. 字體匯入
+     2. CSS 變數 & 設計 Token（:root）
+     3. 亮色模式覆蓋 [data-theme="light"]
+     4. Reset & 基礎樣式
+     5. Typography（排版）
+     6. Navigation（導覽列）
+     7. Hero Section（主視覺）
+     8. Buttons（按鈕）
+     9. Section & Container 共用排版
+    10. About Section
+    11. Skills Section
+    12. 滾動進場動畫
+    13. Antigravity Card 元件
+    14. Navbar Glass-Pill 覆蓋
+    15. 響應式設計（Media Queries）
+    16. Utility Classes
+   ============================================================ */
 
 /* Import Modern Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
 
 /* ===================================
-   CSS Variables & Design Tokens
+   CSS 變數 & 設計 Token
+   修改顏色主題時，只需在此更改對應變數值，
+   整個網站會統一更新
    =================================== */
 :root {
     /* Colors - Antigravity Theme (Dark/Neon) */
@@ -65,9 +85,13 @@
     --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Light Mode Overrides (if toggled) */
+/* ===================================
+   亮色模式覆蓋
+   當 <html data-theme="light"> 時套用
+   由 ThemeContext.jsx 的 toggleTheme() 控制
+   =================================== */
 [data-theme="light"] {
-    --color-bg: #ffffff;
+    --color-bg: #ecf3fc;
     --color-bg-secondary: #f8fafc;
     --color-bg-glass: rgba(255, 255, 255, 0.9);
     --color-text: #0f172a;
@@ -83,7 +107,9 @@
 }
 
 /* ===================================
-   Reset & Base Styles
+   Reset & 基礎樣式
+   清除瀏覽器預設 margin/padding，
+   並設定 box-sizing 為 border-box（尺寸計算更直觀）
    =================================== */
 * {
     margin: 0;
@@ -111,7 +137,9 @@ body {
 }
 
 /* ===================================
-   Typography
+   Typography（排版）
+   標題使用 Outfit，內文使用 Inter
+   字體大小使用 clamp() 實現流體排版（自動響應螢幕寬度）
    =================================== */
 h1,
 h2,
@@ -166,7 +194,9 @@ a:hover {
 }
 
 /* ===================================
-   Navigation
+   Navigation（導覽列）
+   固定置頂，使用 backdrop-filter 毛玻璃效果
+   .scrolled class 由 JS 在頁面捲動時動態加入（如有實作）
    =================================== */
 .navbar {
     position: fixed;
@@ -293,7 +323,9 @@ a:hover {
 }
 
 /* ===================================
-   Hero Section
+   Hero Section（主視覺）
+   使用 min-height: 100vh 佔滿整個視窗高度
+   ::before 偽元素可放置背景圖片（目前透明度 0.2）
    =================================== */
 .hero {
     min-height: 100vh;
@@ -347,6 +379,9 @@ a:hover {
     margin: 0 auto var(--spacing-lg);
 }
 
+/* 姓名漸層文字特效（Hero 區塊專用）
+   使用藍色系漸層，覆蓋預設文字顏色
+   注意：此區塊使用 !important，會覆蓋下方 Utility Classes 的 .text-gradient */
 .text-gradient {
     color: #4357d3 !important;
     background: linear-gradient(135deg, #394bc3 0%, #2a6edc 30%, #4c93e9 60%, #5ea1ee 100%) !important;
@@ -359,8 +394,12 @@ a:hover {
 
 /* ... existing code ... */
 
-/* Mobile Menu */
-/* (Moved to media query below) */
+/* ===================================
+   Buttons（按鈕）
+   .btn-primary  → 白底紫字實心按鈕
+   .btn-secondary → 毛玻璃半透明邊框按鈕
+   亮/暗模式下均有對應覆蓋樣式
+   =================================== */
 .cta-buttons {
     display: flex;
     gap: var(--spacing-sm);
@@ -434,10 +473,10 @@ a:hover {
    Section Styles
    =================================== */
 section {
-    min-height: 100vh;
+    min-height: 70vh; /* 從 100vh 縮小，減少視覺垂直長度 */
     /* Top padding accounts for header (60px) + visual spacing */
     /* Bottom padding is larger (20vh) to push the centered content upwards */
-    padding: calc(60px + 2rem) var(--spacing-md) 6rem;
+    padding: calc(60px + 1rem) var(--spacing-md) 4rem; /* 縮小 padding-top 從 2rem 到 1rem */
     display: flex;
     align-items: center;
     /* Center horizontally */
@@ -445,7 +484,7 @@ section {
     /* Center vertically in the available space */
     box-sizing: border-box;
     position: relative;
-    scroll-margin-top: 0;
+    scroll-margin-top: 60px; /* 配合 Navbar 高度縮小偏移量，讓標題更靠上 */
     /* Align perfectly with viewport top */
 }
 
@@ -603,7 +642,15 @@ section {
     border-color: var(--color-primary);
 }
 
-/* Animations */
+/* ===================================
+   滾動進場動畫
+   使用方法：
+     1. 在元素加上 class="reveal-on-scroll"
+     2. 當元素進入可視區域後，JS 加入 is-visible class
+        (由 useIntersectionObserver.js 控制)
+     3. CSS transition 執行淡入 + 向上位移動畫
+   =================================== */
+/* .fade-in → 可搭配 CSS animation 使用 */
 .fade-in {
     animation: fadeIn 0.8s ease-out forwards;
     opacity: 0;
@@ -635,14 +682,18 @@ section {
 
 /* Component Placeholders (Will be specific in JSX) */
 section {
-    padding: 6rem 0;
+    padding: 4rem 0 2rem; /* 從 6rem 縮小，且底部留一點就好 */
     position: relative;
-    scroll-margin-top: 100px;
+    scroll-margin-top: 70px; /* 統一導覽偏移量 */
     /* Offset for fixed navbar */
 }
 
-/* Antigravity Card Style */
-/* Antigravity Card Style */
+/* ===================================
+   Antigravity Card 元件
+   特效：懸停時浮起 + 頂部漸層線條展開
+   ::before 偽元素實現頂部漸層線（預設 scaleX(0)，hover 後展開至 1）
+   使用此 class 的元件：SkillCard、ProjectCard、ContactCard
+   =================================== */
 .antigravity-card {
     background: var(--bg-secondary);
     border-radius: var(--radius-xl);
@@ -680,7 +731,10 @@ section {
     border-color: var(--color-primary);
 }
 
-/* Responsive About Section Override */
+/* ===================================
+   Responsive About（關於我）響應式覆蓋
+   螢幕寬度 ≤ 900px：兩欄 Grid 改為單欄，文字置中
+   =================================== */
 @media (max-width: 900px) {
     .about-content {
         grid-template-columns: 1fr !important;
@@ -693,8 +747,11 @@ section {
     }
 }
 
-/* Navbar - Floating Pill */
-/* Navbar - Full Width */
+/* ===================================
+   Navbar Glass-Pill 全寬覆蓋
+   注意：此段覆蓋上方的基礎 .navbar 定義，
+   使導覽列呈現全寬毛玻璃橫條而非浮動膠囊型
+   =================================== */
 .navbar {
     position: fixed;
     top: 0;
@@ -776,7 +833,12 @@ section {
     color: var(--text-primary);
 }
 
-/* Responsive Navbar */
+/* ===================================
+   響應式設計 — 平板（≤ 768px）
+   - 顯示漢堡選單按鈕
+   - 導覽選單改為下拉式浮動面板（opacity + pointer-events 控制顯藏）
+   - .nav-menu.active：選單展開狀態（由 Navbar.jsx 的 isMenuOpen state 控制）
+   =================================== */
 @media (max-width: 768px) {
     .navbar {
         padding: 1rem;
@@ -844,7 +906,10 @@ section {
     }
 }
 
-/* Mobile Devices (480px and below) */
+/* ===================================
+   響應式設計 — 手機（≤ 480px）
+   縮小 spacing 變數、調整 Hero 高度與按鈕排列
+   =================================== */
 @media (max-width: 480px) {
     :root {
         --spacing-md: 1.5rem;
@@ -942,7 +1007,9 @@ section {
 }
 
 /* ===================================
-   Utility Classes
+   Utility Classes（工具類別）
+   .text-gradient → 漸層文字（使用 var(--gradient-primary)）
+   .glass-effect  → 毛玻璃效果（可複用於任何元素）
    =================================== */
 .text-gradient {
     background: var(--gradient-primary);

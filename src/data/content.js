@@ -1,5 +1,30 @@
+// ============================================================
+// content.js — 多語言靜態文字內容
+//
+// 結構：
+//   content.zh → 繁體中文版本的所有文字
+//   content.en → 英文版本的所有文字
+//
+// 每個語言物件包含以下區塊：
+//   nav      → 導覽列連結文字
+//   hero     → 首頁英雄區塊的問候語、姓名、學歷等
+//   about    → 關於我頁面的標題與三段自介文字
+//   skills   → 技能卡片列表（title, desc, icon）
+//              icon 字串對應 Skills.jsx 中的 iconMap
+//   projects → 作品集卡片列表（title, desc, tags, image, linkText）
+//              image 路徑相對於 public/ 資料夾 (如 /images/project1.jpg)
+//   contact  → 電子郵件與電話號碼
+//   footer   → 版權聲明文字
+//
+// 修改方式：
+//   - 更新個人資訊或文字：直接修改對應語言物件中的值
+//   - 新增技能卡片：在 skills.items 陣列中新增物件
+//   - 新增作品：在 projects.items 陣列中新增物件，並將圖片放至 public/images/
+// ============================================================
+
 export const content = {
   zh: {
+    // --- 導覽列 ---
     nav: {
       home: "首頁",
       about: "關於我",
@@ -7,14 +32,18 @@ export const content = {
       projects: "作品集",
       contact: "聯絡方式"
     },
+
+    // --- 英雄區塊（首頁主視覺） ---
     hero: {
       greeting: "嗨，我是 ",
       name: "王泓達",
       subtitle: "國立臺灣大學工業工程學研究所 碩士生",
       description: "國立成功大學會計學系、工業與資訊管理學系雙學位學士",
-      viewProjects: "我的貼文",
+      viewProjects: "我的貼文",   // 連結至外部部落格
       contactMe: "聯絡我"
     },
+
+    // --- 關於我 ---
     about: {
       title: "關於我",
       subtitle: "對知識充滿熱忱的跨領域學習者",
@@ -22,6 +51,9 @@ export const content = {
       text2: "除了學術知識，我也致力於將理論應用於解決實際問題。大學時期，我曾帶領團隊在成大商管競賽中以 AKB48 海外拓展策略獲得冠軍。碩士期間，我參加了中華郵政大數據競賽，並獲得創意獎與 Galaxy Software Services 特別獎。我們的專案利用時間序列分析與非線性規劃優化郵筒設置，預期能為新設點帶來 7.5 倍的營收增長。",
       text3: "我期許自己能在團隊中扮演積極與激勵的角色，透過跨部門協作激發創意。憑藉我的分析專業與人際溝通能力，我有信心能帶來嶄新觀點、推動創新並提升團隊績效。我相信，堅持不懈與清晰的思維是追求卓越與持續自我精進的關鍵。"
     },
+
+    // --- 技能卡片列表 ---
+    // icon 值必須對應 Skills.jsx 中 iconMap 的 key
     skills: {
       title: "專業技能",
       subtitle: "我的專業領域涵蓋多個開發堆疊，從前端到後端，從設計到開發",
@@ -34,6 +66,9 @@ export const content = {
         { title: "語言能力", desc: "英語 (TOEIC 880), 日語 (JLPT N3), 德語 (入門),韓語 (入門)", icon: "language" }
       ]
     },
+
+    // --- 作品集卡片列表 ---
+    // image 路徑對應 public/images/ 資料夾
     projects: {
       title: "作品集",
       subtitle: "探索我最新的專案作品與創意實踐",
@@ -61,17 +96,26 @@ export const content = {
         }
       ]
     },
+
+    // --- 聯絡資訊 ---
     contact: {
       title: "聯絡我",
       subtitle: "歡迎隨時與我聯繫！",
       email: "hungta.wang0118@gmail.com",
       phone: "+886 939 815 932"
     },
+
+    // --- 頁尾 ---
     footer: {
-      copyright: "© 2025 Hung-Ta Wang. All rights reserved.",
+      copyright: "© 2026 Hung-Ta Wang. All rights reserved.",
     }
   },
+
+  // ============================================================
+  // 英文版本（結構與繁中版相同，僅文字不同）
+  // ============================================================
   en: {
+    // --- Navigation ---
     nav: {
       home: "Home",
       about: "About",
@@ -79,6 +123,8 @@ export const content = {
       projects: "Projects",
       contact: "Contact"
     },
+
+    // --- Hero Section ---
     hero: {
       greeting: "Hi, I'm ",
       name: "Hung-Ta Wang",
@@ -87,13 +133,18 @@ export const content = {
       viewProjects: "View My Posts",
       contactMe: "Contact Me"
     },
+
+    // --- About Me ---
     about: {
       title: "About Me",
       subtitle: "I am a passionate interdisciplinary learner",
-      text1: "I am Hung-Ta Wang. I hold dual bachelor’s degrees in Accounting and Industrial and Information Management from National Cheng Kung University (NCKU), and I am currently pursuing a master’s degree in Industrial Engineering at National Taiwan University (NTU). My undergraduate training in accounting has instilled in me a meticulous approach to problem-solving and a solid understanding of business operations. At NTU, I am conducting research on dynamic pricing at the Decision Science Laboratory, focusing on methodologies such as Markov Decision Processes, Dynamic Programming, Time Series Analysis, and Deep Neural Networks.",
-      text2: "Beyond academic knowledge, I have applied theoretical frameworks to real-world challenges. During my undergraduate studies, my team won the championship in the NCKU Business Competition. As a master’s student, I competed in the Chunghwa Post Co., Ltd. Big Data Competition, winning the Creativity Award and Special Award. Our project centered on using Time Series Analysis and Nonlinear Programming to optimize mailbox placement, achieving a projected revenue growth of 7.5 times.",
+      text1: "I am Hung-Ta Wang. I hold dual bachelor's degrees in Accounting and Industrial and Information Management from National Cheng Kung University (NCKU), and I am currently pursuing a master's degree in Industrial Engineering at National Taiwan University (NTU). My undergraduate training in accounting has instilled in me a meticulous approach to problem-solving and a solid understanding of business operations. At NTU, I am conducting research on dynamic pricing at the Decision Science Laboratory, focusing on methodologies such as Markov Decision Processes, Dynamic Programming, Time Series Analysis, and Deep Neural Networks.",
+      text2: "Beyond academic knowledge, I have applied theoretical frameworks to real-world challenges. During my undergraduate studies, my team won the championship in the NCKU Business Competition. As a master's student, I competed in the Chunghwa Post Co., Ltd. Big Data Competition, winning the Creativity Award and Special Award. Our project centered on using Time Series Analysis and Nonlinear Programming to optimize mailbox placement, achieving a projected revenue growth of 7.5 times.",
       text3: "I aspire to play a positive and motivating role within a team, fostering creativity through collaboration. With my expertise in analytics and strong interpersonal communication skills, I am confident in my ability to bring fresh perspectives, drive innovation, and enhance overall team performance. I believe that persistence and clarity of thought are key to achieving excellence and continuous self-improvement."
     },
+
+    // --- Skills Cards ---
+    // icon values must match keys in iconMap in Skills.jsx
     skills: {
       title: "Professional Skills",
       subtitle: "My expertise spans multiple development stacks, from front-end to back-end, from design to development",
@@ -106,6 +157,9 @@ export const content = {
         { title: "Languages", desc: "English (TOEIC 880), Japanese (JLPT N3), Chinese (Native)", icon: "language" }
       ]
     },
+
+    // --- Projects Cards ---
+    // image paths correspond to public/images/ folder
     projects: {
       title: "Portfolio",
       subtitle: "Explore my latest projects and creative practices",
@@ -133,14 +187,18 @@ export const content = {
         }
       ]
     },
+
+    // --- Contact Info ---
     contact: {
       title: "Contact Me",
       subtitle: "Feel free to contact me!",
       email: "hungta.wang0118@gmail.com",
       phone: "+886 939 815 932"
     },
+
+    // --- Footer ---
     footer: {
-      copyright: "© 2025 Hung-Ta Wang. All rights reserved.",
+      copyright: "© 2026 Hung-Ta Wang. All rights reserved.",
     }
   }
 };
