@@ -71,11 +71,11 @@ const Contact = () => {
                     {/* 社群媒體連結（GitHub & LinkedIn）：圓形圖示按鈕 */}
                     <div className="social-links" style={{ display: 'flex', justifyContent: 'center', gap: '2rem' }}>
                         {/* GitHub 連結：修改 href 可更換個人頁面 URL */}
-                        <a href="https://github.com/HungTaWang" className="social-link" target="_blank" aria-label="GitHub" style={{ padding: '1rem', background: 'var(--color-bg-glass)', borderRadius: '50%', border: '1px solid var(--color-border)', color: 'var(--color-text)', display: 'flex', transition: 'all 0.3s ease' }}>
+                        <a href="https://github.com/HungTaWang" className="social-link" target="_blank" aria-label="GitHub">
                             <Github size={32} />
                         </a>
                         {/* LinkedIn 連結：修改 href 可更換個人頁面 URL */}
-                        <a href="https://www.linkedin.com/in/hungtawang/" className="social-link" target="_blank" aria-label="LinkedIn" style={{ padding: '1rem', background: 'var(--color-bg-glass)', borderRadius: '50%', border: '1px solid var(--color-border)', color: 'var(--color-text)', display: 'flex', transition: 'all 0.3s ease' }}>
+                        <a href="https://www.linkedin.com/in/hungtawang/" className="social-link" target="_blank" aria-label="LinkedIn">
                             <Linkedin size={32} />
                         </a>
                     </div>

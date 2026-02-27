@@ -207,8 +207,9 @@ a:hover {
     background-color: var(--color-bg-glass);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border-bottom: none; /* 移除重複邊界 */
-    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+    background-color: var(--color-bg); /* 將背景移至最外層 */
+    padding: 0;
     transition: all var(--transition-normal);
 }
 
@@ -498,6 +499,34 @@ section {
     box-sizing: border-box;
 }
 
+/* Social Links - 聯絡我下方的圓形按鈕 */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 3rem !important; /* 增加按鈕之間的間距，強制覆蓋行內樣式 */
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 1px solid var(--color-border);
+    background: transparent;
+    color: var(--color-text-secondary);
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: var(--gradient-primary);
+    border-color: transparent;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3);
+}
+
 .section-header {
     text-align: center;
     margin-bottom: var(--spacing-md);
@@ -658,7 +687,8 @@ section {
 .reveal-on-scroll {
     opacity: 0;
     transform: translateY(30px);
-    transition: all 1s cubic-bezier(0.5, 0, 0, 1);
+    /* 修正：分開 transition 屬性，避免全域 'all' 導致 hover 反應遲鈍 */
+    transition: opacity 1s cubic-bezier(0.5, 0, 0, 1), transform 1s cubic-bezier(0.5, 0, 0, 1);
     will-change: opacity, transform;
 }
 
@@ -763,30 +793,21 @@ section {
 .nav-container.glass-pill {
     pointer-events: auto;
     max-width: 100% !important;
-    /* Full width */
     margin: 0;
-    background: var(--color-bg-glass);
-    /* Match theme glass background */
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background: transparent !important; /* 內層改為透明 */
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
     padding: 1rem 2rem;
-    /* Comfortable internal spacing */
     border-radius: 0;
-    /* No rounded corners */
-    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
-    /* Bottom border only */
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    box-shadow: var(--shadow-sm);
+    border: none;
+    box-shadow: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 [data-theme='dark'] .nav-container.glass-pill {
-    background: rgba(15, 23, 42, 0.85);
-    /* Matches --color-bg-glass */
+    background: transparent !important;
 }
 
 .nav-menu {

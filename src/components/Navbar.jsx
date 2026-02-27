@@ -18,7 +18,7 @@
 //   glass-pill      → 毛玻璃膠囊效果（定義於 index.css）
 // ============================================================
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { useTheme } from '../context/ThemeContext';
@@ -37,7 +37,28 @@ const Navbar = () => {
     const t = content[language].nav;
 
     // 切換選單開關狀態
-    const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+    const toggleMenu = (e) => {
+        e.stopPropagation(); // 防止點擊按鈕時觸發文件點擊事件導致立刻關起
+        setIsMenuOpen(!isMenuOpen);
+    };
+
+    // 新增：點擊螢幕任何地方（除 Navbar 外）自動縮回
+    useEffect(() => {
+        const handleDocumentClick = (e) => {
+            // 如果點擊的地方不在 navbar 內
+            if (isMenuOpen && !e.target.closest('.navbar')) {
+                setIsMenuOpen(false);
+            }
+        };
+
+        if (isMenuOpen) {
+            document.addEventListener('click', handleDocumentClick);
+        }
+
+        return () => {
+            document.removeEventListener('click', handleDocumentClick);
+        };
+    }, [isMenuOpen]);
 
     return (
         <nav className="navbar" id="navbar">
