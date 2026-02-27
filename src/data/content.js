@@ -29,7 +29,7 @@ export const content = {
       home: "首頁",
       about: "關於我",
       skills: "專業技能",
-      projects: "作品集",
+      projects: "專案經歷",
       contact: "聯絡方式"
     },
 
@@ -53,7 +53,6 @@ export const content = {
     },
 
     // --- 技能卡片列表 ---
-    // icon 值必須對應 Skills.jsx 中 iconMap 的 key
     skills: {
       title: "專業技能",
       subtitle: "我的專業領域涵蓋多個開發堆疊，從前端到後端，從設計到開發",
@@ -67,32 +66,52 @@ export const content = {
       ]
     },
 
-    // --- 作品集卡片列表 ---
-    // image 路徑對應 public/images/ 資料夾
+    // --- 專案經歷 ---
     projects: {
-      title: "作品集",
-      subtitle: "探索我最新的專案作品與創意實踐",
+      title: "專案經歷",
+      subtitle: "探索我參與的各項專案，包含 AI 應用、決策科學與大數據競賽",
       items: [
+        {
+          title: "動態定價策略研究 @ 台大決策科學實驗室",
+          desc: "獲 2025 管理創新與作業研究國際研討會「傑出論文獎」。運用動態規劃與機器學習模擬航空業顧客行為，優化定價效益。",
+          tags: ["Dynamic Programming", "Machine Learning", "Optimization"],
+          image: "/images/project_dp.jpg",
+          linkText: "查看摘要"
+        },
         {
           title: "投資組合推薦 LINE Bot",
           desc: "整合 TEJ 資料庫與 PostgreSQL，運用 PCA 與 AHP 模型進行特徵選取，打造準確率達 59% 的投資預測與推薦系統。",
-          tags: ["Python", "SQL", "AHP Model"],
-          image: "/images/project1.jpg",
-          linkText: "查看專案"
+          tags: ["Python", "PostgreSQL", "Data Science"],
+          image: "/images/project_tej.jpg",
+          linkText: "查看摘要"
         },
         {
-          title: "羽球拍瑕疵檢測 AI 模型",
-          desc: "AI CUP 2025 春季賽銀牌作品。結合 LightGBM 與 CNN 混合模型，應用傅立葉轉換處理不平衡資料，精準識別生產瑕疵。",
+          title: "AI CUP 2025 春季賽：羽球拍瑕疵檢測",
+          desc: "榮獲全國銅牌。開發 LightGBM 與 CNN 混合模型，應用傅立葉轉換處理不平衡資料，解決製造業視覺辨識痛點。",
           tags: ["Deep Learning", "Computer Vision", "LightGBM"],
-          image: "/images/project2.jpg",
-          linkText: "查看專案"
+          image: "/images/project_aicup.jpg",
+          linkText: "查看摘要"
         },
         {
-          title: "動態定價策略研究",
-          desc: "於台大決策科學實驗室開發。運用動態規劃 (Dynamic Programming) 與機器學習模擬顧客行為，優化航空業定價策略。",
-          tags: ["Dynamic Programming", "Machine Learning", "Optimization"],
-          image: "/images/project3.jpg",
-          linkText: "查看專案"
+          title: "Agentic 工作流自動化 @ Dentsu / AI Academy",
+          desc: "利用 GenAI 工具與進階提示工程 (Prompt Engineering)，實現跨平台 (FB, IG, LINE) 的社群媒體自動化發文工作流。",
+          tags: ["Agentic LLM", "Automation", "GenAI"],
+          image: "/images/project_agent.jpg",
+          linkText: "查看摘要"
+        },
+        {
+          title: "Generative AI 應用黑客松 @ 研華科技",
+          desc: "開發病患照護系統。串接 Linux 工業攝影機捕捉表情，並構建 Agent 工作流自動生成對應的照護回覆。",
+          tags: ["AWS", "Linux", "AI Agent"],
+          image: "/images/project_advantech.jpg",
+          linkText: "查看摘要"
+        },
+        {
+          title: "郵務大數據競賽 @ 中華郵政",
+          desc: "獲創意獎與 GSS 特別獎。使用 ARIMA 模型與非線性規劃優化郵筒設置，預期為新設點提升 7.5 倍營收增量。",
+          tags: ["Time Series", "Optimization", "Python"],
+          image: "/images/project_post.jpg",
+          linkText: "查看摘要"
         }
       ]
     },
@@ -105,22 +124,34 @@ export const content = {
       phone: "+886 939 815 932"
     },
 
+    // --- 工作經歷 ---
+    experience: {
+      title: "工作經歷",
+      subtitle: "我在實習與在校期間的實務經驗",
+      items: [
+        {
+          company: "PricewaterhouseCoopers (PwC) 資誠聯合會計師事務所",
+          position: "審計實習生 (Auditor Intern)",
+          duration: "2022年6月 - 2022年7月",
+          location: "高雄，台灣",
+          desc: "對綠能與營造公司進行實地查核。執行會計傳票測試、控制測試與稅務抽查，並核對財務報表跨期差異。"
+        }
+      ]
+    },
+
     // --- 頁尾 ---
     footer: {
       copyright: "© 2026 Hung-Ta Wang. All rights reserved.",
     }
   },
 
-  // ============================================================
-  // 英文版本（結構與繁中版相同，僅文字不同）
-  // ============================================================
   en: {
     // --- Navigation ---
     nav: {
       home: "Home",
       about: "About",
       skills: "Skills",
-      projects: "Projects",
+      projects: "Project Experience",
       contact: "Contact"
     },
 
@@ -144,7 +175,6 @@ export const content = {
     },
 
     // --- Skills Cards ---
-    // icon values must match keys in iconMap in Skills.jsx
     skills: {
       title: "Professional Skills",
       subtitle: "My expertise spans multiple development stacks, from front-end to back-end, from design to development",
@@ -158,37 +188,56 @@ export const content = {
       ]
     },
 
-    // --- Projects Cards ---
-    // image paths correspond to public/images/ folder
+    // --- Project Experience ---
     projects: {
-      title: "Portfolio",
-      subtitle: "Explore my latest projects and creative practices",
+      title: "Project Experience",
+      subtitle: "Explore my projects involving AI, Decision Science, and Big Data Competitions",
       items: [
         {
-          title: "Investment Portfolio LINE Bot",
-          desc: "Integrated TEJ database with PostgreSQL, using PCA and AHP models for feature selection to build an investment prediction system with 59% accuracy.",
-          tags: ["Python", "SQL", "AHP Model"],
-          image: "/images/project1.jpg",
-          linkText: "View Project"
-        },
-        {
-          title: "Badminton Racket Defect Detection AI",
-          desc: "Silver Prize at AI CUP 2025 Spring. Developed a hybrid model (LightGBM + CNN) using Fourier transform for imbalanced data to detect manufacturing defects.",
-          tags: ["Deep Learning", "Computer Vision", "LightGBM"],
-          image: "/images/project2.jpg",
-          linkText: "View Project"
-        },
-        {
-          title: "Dynamic Pricing Strategy Research",
-          desc: "Developed at NTU Decision Science Lab. Utilized Dynamic Programming and ML to simulate customer behavior and optimize airline pricing strategies.",
+          title: "Dynamic Pricing @ NTU Decision Science Lab",
+          desc: "Awarded Distinguished Paper Award at 2025 IC-MIOR. Utilized DP and ML to simulate customer behavior and optimize airline pricing.",
           tags: ["Dynamic Programming", "Machine Learning", "Optimization"],
-          image: "/images/project3.jpg",
-          linkText: "View Project"
+          image: "/images/project_dp.jpg",
+          linkText: "View Abstract"
+        },
+        {
+          title: "Investment Portfolio LINE Bot",
+          desc: "Integrated TEJ database and PostgreSQL, using PCA and AHP for feature selection to build a system with 59% prediction accuracy.",
+          tags: ["Python", "PostgreSQL", "Data Science"],
+          image: "/images/project_tej.jpg",
+          linkText: "View Abstract"
+        },
+        {
+          title: "AI CUP 2025 Spring: AI Defect Detection",
+          desc: "Bronze Medalist. Developed a hybrid model (LightGBM + CNN) using Fourier transforms for imbalanced data in manufacturing.",
+          tags: ["Deep Learning", "Computer Vision", "LightGBM"],
+          image: "/images/project_aicup.jpg",
+          linkText: "View Abstract"
+        },
+        {
+          title: "Agentic Workflow Automation @ Dentsu",
+          desc: "Implemented cross-platform (FB, IG, LINE) social media automation workflows using GenAI tools and advanced prompt engineering.",
+          tags: ["Agentic LLM", "Automation", "GenAI"],
+          image: "/images/project_agent.jpg",
+          linkText: "View Abstract"
+        },
+        {
+          title: "Generative AI Hackathon @ Advantech",
+          desc: "Developed a patient care system. Interfaced industrial cameras to capture expressions and built an agent for automated replies.",
+          tags: ["AWS", "Linux", "AI Agent"],
+          image: "/images/project_advantech.jpg",
+          linkText: "View Abstract"
+        },
+        {
+          title: "Big Data Competition @ Chunghwa Post",
+          desc: "Received Creativity Award and GSS Special Award. Used ARIMA and Nonlinear Programming to optimize mailbox placement.",
+          tags: ["Time Series", "Optimization", "Python"],
+          image: "/images/project_post.jpg",
+          linkText: "View Abstract"
         }
       ]
     },
 
-    // --- Contact Info ---
     contact: {
       title: "Contact Me",
       subtitle: "Feel free to contact me!",
@@ -196,7 +245,21 @@ export const content = {
       phone: "+886 939 815 932"
     },
 
-    // --- Footer ---
+    // --- Work Experience ---
+    experience: {
+      title: "Work Experience",
+      subtitle: "My professional and internship experiences",
+      items: [
+        {
+          company: "PricewaterhouseCoopers (PwC)",
+          position: "Auditor Intern",
+          duration: "Jun. 2022 - Jul. 2022",
+          location: "Kaohsiung, Taiwan",
+          desc: "Conducted invoice audits during on-site visits to renewable energy and construction companies. Performed journal entry testing and financial statement reviews."
+        }
+      ]
+    },
+
     footer: {
       copyright: "© 2026 Hung-Ta Wang. All rights reserved.",
     }

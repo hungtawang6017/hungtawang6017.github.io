@@ -62,50 +62,40 @@ const Projects = () => {
                             className="antigravity-card project-card" 
                             key={index} 
                             style={{ 
-                                // padding: '0rem',  // 暫時停用，改用四值 shorthand
-                                padding: '0rem, 0.5rem, 2rem, 0.5rem',
-                                overflow: 'hidden', 
-                                border: '1px solid var(--border-color)',
-                                transition: 'transform 0.4s ease, box-shadow 0.4s ease' // Ensure hover works
+                                padding: '1.5rem',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '100%',
+                                border: '1px solid var(--color-border)',
+                                transition: 'transform 0.4s ease, box-shadow 0.4s ease'
                             }}
                         >
-                            {/* 封面圖容器（固定高度，超出裁切） */}
-                            <div className="project-image" style={{ height: '240px', overflow: 'hidden' }}>
-                                {/* Using placeholder path if image missing */}
-                                <img 
-                                    src={project.image} 
-                                    alt={project.title} 
-                                    // 圖片不存在時顯示預覽圖
-                                    onError={(e) => e.target.src = 'https://placehold.co/600x400?text=Project'} 
-                                    style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }}
-                                />
-                            </div>
-
                             {/* 卡片文字資訊區 */}
-                            <div className="project-info" style={{ padding: '2rem' }}>
+                            <div className="project-info" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
                                 {/* 作品名稱 */}
-                                <h4 style={{ fontSize: '1.5rem', marginBottom: '0.75rem' }}>{project.title}</h4>
+                                <h4 style={{ fontSize: '1.35rem', marginBottom: '0.75rem', color: 'var(--color-text)' }}>{project.title}</h4>
                                 {/* 作品描述 */}
-                                <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', lineHeight: '1.6' }}>{project.desc}</p>
+                                <p style={{ color: 'var(--color-text-secondary)', marginBottom: '1.5rem', lineHeight: '1.6', fontSize: '0.95rem', flex: '1' }}>{project.desc}</p>
 
                                 {/* 技術標籤列 */}
-                                <div className="project-tags" style={{ marginBottom: '1.5rem' }}>
+                                <div className="project-tags" style={{ marginBottom: '1.5rem', display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
                                     {project.tags.map((tag, i) => (
                                         <span className="tag" key={i} style={{ 
-                                            background: 'rgba(66, 133, 244, 0.1)', 
-                                            color: 'var(--accent-color)',
-                                            padding: '0.4rem 1rem', 
-                                            borderRadius: '99px',    // 膠囊形狀
-                                            fontSize: '0.85rem',
-                                            fontWeight: '500' 
+                                            background: 'rgba(139, 92, 246, 0.1)', 
+                                            color: 'var(--color-primary)',
+                                            padding: '0.3rem 0.8rem', 
+                                            borderRadius: '99px',
+                                            fontSize: '0.75rem',
+                                            fontWeight: '600',
+                                            border: '1px solid rgba(139, 92, 246, 0.2)'
                                         }}>{tag}</span>
                                     ))}
                                 </div>
 
-                                {/* 查看連結（目前為預留用，點擊不跳轉） */}
-                                <a href="#" className="project-link" onClick={(e) => e.preventDefault()} style={{ display: 'inline-flex', alignItems: 'center', fontWeight: '600', color: 'var(--text-primary)' }}>
+                                {/* 查看連結 */}
+                                <a href="#" className="project-link" onClick={(e) => e.preventDefault()} style={{ display: 'inline-flex', alignItems: 'center', fontWeight: '600', color: 'var(--color-primary)', fontSize: '0.9rem' }}>
                                     <span>{project.linkText}</span>
-                                    <ArrowRight size={18} style={{ marginLeft: '6px' }} />
+                                    <ArrowRight size={16} style={{ marginLeft: '4px' }} />
                                 </a>
                             </div>
                         </div>

@@ -64,11 +64,11 @@
     --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.4);
 
     /* Spacing */
-    --spacing-xs: 0.75rem;
-    --spacing-sm: 1.25rem;
-    --spacing-md: 2.5rem;
-    --spacing-lg: 4.5rem;
-    --spacing-xl: 7rem;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 5rem;
 
     /* Typography */
     --font-primary: 'Inter', system-ui, sans-serif;
@@ -207,7 +207,7 @@ a:hover {
     background-color: var(--color-bg-glass);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+    border-bottom: none; /* 移除重複邊界 */
     padding: var(--spacing-sm) 0;
     transition: all var(--transition-normal);
 }
@@ -473,10 +473,8 @@ a:hover {
    Section Styles
    =================================== */
 section {
-    min-height: 70vh; /* 從 100vh 縮小，減少視覺垂直長度 */
-    /* Top padding accounts for header (60px) + visual spacing */
-    /* Bottom padding is larger (20vh) to push the centered content upwards */
-    padding: calc(60px + 1rem) var(--spacing-md) 4rem; /* 縮小 padding-top 從 2rem 到 1rem */
+    min-height: auto;
+    padding: clamp(3rem, 8vh, 5rem) var(--spacing-md);
     display: flex;
     align-items: center;
     /* Center horizontally */
@@ -592,9 +590,10 @@ section {
 /* ===================================
    Skills Section
    =================================== */
-.skills-grid {
+.skills-grid,
+.projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--spacing-sm);
     margin-top: var(--spacing-sm);
     flex-shrink: 1;
@@ -681,12 +680,7 @@ section {
 }
 
 /* Component Placeholders (Will be specific in JSX) */
-section {
-    padding: 4rem 0 2rem; /* 從 6rem 縮小，且底部留一點就好 */
-    position: relative;
-    scroll-margin-top: 70px; /* 統一導覽偏移量 */
-    /* Offset for fixed navbar */
-}
+/* 已統一至上方 Section Styles 區塊 */
 
 /* ===================================
    Antigravity Card 元件
@@ -902,7 +896,12 @@ section {
     }
 
     .hero {
-        padding: var(--spacing-lg) var(--spacing-sm);
+        padding: var(--spacing-xl) var(--spacing-sm);
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 }
 
@@ -919,7 +918,7 @@ section {
 
     section {
         min-height: auto;
-        padding: var(--spacing-lg) var(--spacing-sm);
+        padding: 4rem var(--spacing-sm);
     }
 
     .hero {

@@ -14,6 +14,7 @@ import Hero from './Hero';
 import About from './About';
 import Skills from './Skills';
 import Projects from './Projects';
+import Experience from './Experience';
 import Contact from './Contact';
 
 const Home = () => {
@@ -23,7 +24,8 @@ const Home = () => {
             <Hero />      {/* 英雄主視覺區塊 */}
             <About />     {/* 關於我 */}
             <Skills />    {/* 專業技能 */}
-            <Projects />  {/* 作品集 */}
+            <Projects />  {/* 專案經歷 */}
+            <Experience /> {/* 工作經歷 */}
             <Contact />   {/* 聯絡方式 */}
         </div>
     );

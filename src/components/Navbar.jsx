@@ -62,6 +62,7 @@ const Navbar = () => {
                     <li><a href="#about" className="nav-link" onClick={() => setIsMenuOpen(false)}>{t.about}</a></li>
                     <li><a href="#skills" className="nav-link" onClick={() => setIsMenuOpen(false)}>{t.skills}</a></li>
                     <li><a href="#projects" className="nav-link" onClick={() => setIsMenuOpen(false)}>{t.projects}</a></li>
+                    <li><a href="#experience" className="nav-link" onClick={() => setIsMenuOpen(false)}>{language === 'zh' ? '工作經歷' : 'Experience'}</a></li>
                     <li><a href="#contact" className="nav-link" onClick={() => setIsMenuOpen(false)}>{t.contact}</a></li>
 
                     {/* 視覺分隔線 */}

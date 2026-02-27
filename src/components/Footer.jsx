@@ -24,7 +24,7 @@ const Footer = () => {
             <div className="container">
                 <div className="footer-content">
                     {/* 版權聲明（字體大小單位有空格：'0.8 rem' → 若要修正請改為 '0.8rem'） */}
-                    <p style={{ fontSize: '0.8 rem', color: 'var(--text-secondary)' }}>{t.copyright}</p>
+                    <p style={{ fontSize: '1rem', color: 'var(--color-text-secondary)' }}>{t.copyright}</p>
                 </div>
             </div>
         </footer>
