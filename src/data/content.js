@@ -46,10 +46,10 @@ export const content = {
     // --- 關於我 ---
     about: {
       title: "關於我",
-      subtitle: "對知識充滿熱忱的跨領域學習者",
-      text1: "我是王泓達，擁有國立成功大學會計學與工業資訊管理雙學士學位，目前於國立臺灣大學工業工程學研究所攻讀碩士。會計背景培養了我縝密的問題解決能力與對商業運作的深刻理解，而工資管的訓練則結合了工業實務與資訊管理，使我能將規劃轉化為具體成果。目前在台大決策科學實驗室研究動態定價，專注於馬可夫決策過程、動態規劃、時間序列分析與深度神經網絡等方法。",
-      text2: "除了學術知識，我也致力於將理論應用於解決實際問題。大學時期，我曾帶領團隊在成大商管競賽中以 AKB48 海外拓展策略獲得冠軍。碩士期間，我參加了中華郵政大數據競賽，並獲得創意獎與 Galaxy Software Services 特別獎。我們的專案利用時間序列分析與非線性規劃優化郵筒設置，預期能為新設點帶來 7.5 倍的營收增長。",
-      text3: "我期許自己能在團隊中扮演積極與激勵的角色，透過跨部門協作激發創意。憑藉我的分析專業與人際溝通能力，我有信心能帶來嶄新觀點、推動創新並提升團隊績效。我相信，堅持不懈與清晰的思維是追求卓越與持續自我精進的關鍵。"
+      subtitle: "工業工程與財務會計跨領域碩士生",
+      text1: "您好，我是王泓達，擁有國立成功大學會計學系與工業與資訊管理學系雙學位 ，目前在國立臺灣大學工業工程學研究所深造 。這樣的跨領域背景塑造了我獨特的思維模式：我既具備財會人對成本、效益與稅務法規的嚴謹態度與專業知識，同時又擁有工工人利用數據、最佳化與程式實現管理構想的邏輯思維與執行力。",
+      text2: "我最大的特質是具全局觀的創新解決能力。我擅長找出問題，並利用最小的改動解決問題，並將技術轉化為商業優勢。如航空業的機票訂價問題，我將顧客行為與參考價格效應納入考量，開發出動態訂價模型，這項兼具理論與實務價值的研究，也在 2025 年國際研討會獲得傑出論文獎。",
+      text3: "我深信堅實的數學與邏輯是解決問題的核心素養，程式能力是執行數學的媒介，而管理意涵則是在團隊合作時凝聚眾人一同解決問題的核心價值。我一直以此為目標訓練自己，同時不斷學習新知，如語言、網頁與生成式AI等，期待能將這種跨領域的洞察力與大膽創新的執行力應用於職場中，為公司創造價值。"
     },
 
     // --- 技能卡片列表 ---
@@ -57,12 +57,12 @@ export const content = {
       title: "專業技能",
       subtitle: "我的專業領域涵蓋多個開發堆疊，從前端到後端，從設計到開發",
       items: [
-        { title: "程式設計", desc: "Python, C++, Gurobi, Qt Development, Linux", icon: "code" },
+        { title: "程式設計", desc: "C++, C#, Python, Gurobi, Qt Development, Linux Shell Script", icon: "code" },
         { title: "數據科學", desc: "R, SQL, SPSS, TEJ, Oracle Crystal Ball", icon: "chart-bar" },
-        { title: "網頁開發", desc: "Node.js, Jekyll, HTML, CSS, JavaScript, jQuery, Bootstrap", icon: "laptop-code" },
-        { title: "學術研究", desc: "動態規劃, 深度學習", icon: "brain" },
-        { title: "財務管理", desc: "財務會計, 財務報表分析, 衍生性金融商品", icon: "briefcase" },
-        { title: "語言能力", desc: "英語 (TOEIC 880), 日語 (JLPT N3), 德語 (入門),韓語 (入門)", icon: "language" }
+        { title: "網頁開發", desc: "React, Jekyll, HTML, CSS, JavaScript, jQuery, Bootstrap", icon: "laptop-code" },
+        { title: "學術研究", desc: "深度學習, 馬可夫決策過程, 收益管理, 顧客異質性, 客戶行為模擬", icon: "brain" },
+        { title: "財務管理", desc: "財務會計, 成本會計, 審計學, 財務報表分析, 工程經濟, 衍生性金融商品", icon: "briefcase" },
+        { title: "語言能力", desc: "中文 (母語), 英語 (TOEIC 880), 日語 (JLPT N3), 德語 (入門),韓語 (入門)", icon: "language" }
       ]
     },
 
@@ -72,44 +72,44 @@ export const content = {
       subtitle: "探索我參與的各項專案，包含 AI 應用、決策科學與大數據競賽",
       items: [
         {
-          title: "動態定價策略研究 @ 台大決策科學實驗室",
+          title: "考量市場區隔與參考價格之動態訂價策略",
           desc: "獲 2025 管理創新與作業研究國際研討會「傑出論文獎」。運用動態規劃與機器學習模擬航空業顧客行為，優化定價效益。",
-          tags: ["Dynamic Programming", "Machine Learning", "Optimization"],
+          tags: ["Markov Decision Process", "Deep Learning"],
           image: "/images/project_dp.jpg",
           linkText: "查看摘要"
         },
         {
-          title: "投資組合推薦 LINE Bot",
+          title: "利用 AHP 結合 LINE Bot 推薦投資組合",
           desc: "整合 TEJ 資料庫與 PostgreSQL，運用 PCA 與 AHP 模型進行特徵選取，打造準確率達 59% 的投資預測與推薦系統。",
-          tags: ["Python", "PostgreSQL", "Data Science"],
+          tags: ["SQL", "AHP", "TEJ", "Linebot"],
           image: "/images/project_tej.jpg",
           linkText: "查看摘要"
         },
         {
-          title: "AI CUP 2025 春季賽：羽球拍瑕疵檢測",
+          title: "AI CUP 2025 春季賽: 桌球選手分類",
           desc: "榮獲全國銅牌。開發 LightGBM 與 CNN 混合模型，應用傅立葉轉換處理不平衡資料，解決製造業視覺辨識痛點。",
-          tags: ["Deep Learning", "Computer Vision", "LightGBM"],
+          tags: ["Deep Learning", "Computer Vision"],
           image: "/images/project_aicup.jpg",
           linkText: "查看摘要"
         },
         {
-          title: "Agentic 工作流自動化 @ Dentsu / AI Academy",
+          title: "AI 行銷認證：基礎實務應用",
           desc: "利用 GenAI 工具與進階提示工程 (Prompt Engineering)，實現跨平台 (FB, IG, LINE) 的社群媒體自動化發文工作流。",
-          tags: ["Agentic LLM", "Automation", "GenAI"],
+          tags: ["Make", "Automatic Workflow"],
           image: "/images/project_agent.jpg",
           linkText: "查看摘要"
         },
         {
-          title: "Generative AI 應用黑客松 @ 研華科技",
+          title: "雲湧智生｜臺灣生成式AI應用黑客松競賽",
           desc: "開發病患照護系統。串接 Linux 工業攝影機捕捉表情，並構建 Agent 工作流自動生成對應的照護回覆。",
-          tags: ["AWS", "Linux", "AI Agent"],
+          tags: ["AWS Bedrock", "AWS S3", "Linux Shell Script"],
           image: "/images/project_advantech.jpg",
           linkText: "查看摘要"
         },
         {
-          title: "郵務大數據競賽 @ 中華郵政",
+          title: "AI郵局 智創新局 - 2024 郵政大數據競賽",
           desc: "獲創意獎與 GSS 特別獎。使用 ARIMA 模型與非線性規劃優化郵筒設置，預期為新設點提升 7.5 倍營收增量。",
-          tags: ["Time Series", "Optimization", "Python"],
+          tags: ["Time Series Analysis", "Nonlinear Programming"],
           image: "/images/project_post.jpg",
           linkText: "查看摘要"
         }
