@@ -74,7 +74,7 @@ export const content = {
         {
           title: "考量市場區隔與參考價格之動態訂價策略 @ NTU",
           desc: "獲傑出論文獎，由 2025 管理創新與作業研究國際研討會主辦。時效性商品需在有限銷售期內，做出精準的需求預測與有效用的訂價，因此我的研究提出同時考量異質價格敏感度與寡占競爭的時效性產品動態訂價模型。",
-          tags: ["Markov Decision Process", "Deep Learning"],
+          tags: ["馬可夫決策過程", "深度學習"],
           image: "/images/project_dp.jpg",
           linkText: "點擊查看貼文",
           url: "https://hungtawang.github.io/2025/01/20/Dynamic_Pricing_Strategy_NTU"
@@ -82,7 +82,7 @@ export const content = {
         {
           title: "AI CUP 2025春季賽－桌球智慧球拍資料的精準分析競賽",
           desc: "獲得全國銅牌獎 (633 隊伍中第 3 名)，由教育部人工智慧競賽與標註資料蒐集計畫辦公室主辦。我們先以傅立葉轉換將波型資料轉換為頻譜圖，再使用 LightGBM 與 CNN 混合模型，以提升模型預測準確度。",
-          tags: ["Deep Learning", "Computer Vision"],
+          tags: ["深度學習", "影像辨識"],
           image: "/images/project_aicup.jpg",
           linkText: "點擊查看貼文",
           url: "https://hungtawang.github.io/2025/04/10/AI_CUP_2025_Spring"
@@ -114,7 +114,7 @@ export const content = {
         {
           title: "成功盃個案競賽",
           desc: "獲得冠軍，由國立成功大學管理學院舉辦，我們針對日本 AKB48 的海外拓點提供選址建議以及落地方案，此外，我們更提出了詳盡的成本預算估計與財務規劃，創新的行銷策略與縝密的資產分配獲得評審的肯定。",
-          tags: ["Make", "Automatic Workflow"],
+          tags: ["個案分析", "財務分析", "成本會計", "行銷管理"],
           image: "/images/project_agent.jpg",
           linkText: "點擊查看貼文",
           url: "https://hungtawang.github.io/2021/10/02/NCKU_Business_Competition"
@@ -242,7 +242,7 @@ export const content = {
         {
           title: "NCKU Case Study Competition",
           desc: "Won Championship hosted by NCKU College of Management. We provided location recommendations and localization strategies for Japanese group AKB48's overseas expansion, including detailed cost budgeting and financial planning. Our innovative marketing was highly praised by judges.",
-          tags: ["Make", "Automatic Workflow"],
+          tags: ["Case Study", "Financial Analysis", "Cost Accounting", "Marketing"],
           image: "/images/project_agent.jpg",
           linkText: "Click to view my post",
           url: "https://hungtawang.github.io/2021/10/02/NCKU_Business_Competition"
