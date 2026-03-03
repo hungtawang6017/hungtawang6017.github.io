@@ -77,7 +77,7 @@ export const content = {
           tags: ["馬可夫決策過程", "深度學習"],
           image: "/images/project_dp.jpg",
           linkText: "點擊查看貼文",
-          url: "https://hungtawang.github.io/2025/02/23/Dynamic_Pricing_Strategy_NTU"
+          url: "https://hungtawang.github.io/2026/02/23/Dynamic_Pricing_Strategy_NTU"
         },
         {
           title: "AI CUP 2025春季賽－桌球智慧球拍資料的精準分析競賽",
