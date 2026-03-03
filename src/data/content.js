@@ -77,7 +77,7 @@ export const content = {
           tags: ["馬可夫決策過程", "深度學習"],
           image: "/images/project_dp.jpg",
           linkText: "點擊查看貼文",
-          url: "https://hungtawang.github.io/2025/01/20/Dynamic_Pricing_Strategy_NTU"
+          url: "https://hungtawang.github.io/2025/02/23/Dynamic_Pricing_Strategy_NTU"
         },
         {
           title: "AI CUP 2025春季賽－桌球智慧球拍資料的精準分析競賽",
@@ -85,7 +85,7 @@ export const content = {
           tags: ["深度學習", "影像辨識"],
           image: "/images/project_aicup.jpg",
           linkText: "點擊查看貼文",
-          url: "https://hungtawang.github.io/2025/04/10/AI_CUP_2025_Spring"
+          url: "https://hungtawang.github.io/2025/07/17/AI_CUP_2025_Spring"
         },
         {
           title: "雲湧智生｜臺灣生成式AI應用黑客松競賽",
@@ -93,7 +93,7 @@ export const content = {
           tags: ["AWS Bedrock", "AWS Kinesis", "AWS Lambda", "Linux Shell Script"],
           image: "/images/project_advantech.jpg",
           linkText: "點擊查看貼文",
-          url: "https://hungtawang.github.io/2025/04/20/Generative_AI_Applications_Hackathon"
+          url: "https://hungtawang.github.io/2025/04/27/Generative_AI_Applications_Hackathon"
         },
         {
           title: "AI郵局 智創新局 - 2024 郵政大數據競賽",
@@ -109,7 +109,7 @@ export const content = {
           tags: ["SQL", "AHP", "TEJ", "Linebot"],
           image: "/images/project_tej.jpg",
           linkText: "點擊查看貼文",
-          url: "https://hungtawang.github.io/2023/11/20/Investment_Portfolio_Recommendation_NCKU"
+          url: "https://hungtawang.github.io/2024/01/20/Investment_Portfolio_Recommendation_NCKU"
         },
         {
           title: "成功盃個案競賽",
