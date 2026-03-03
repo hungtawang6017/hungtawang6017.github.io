@@ -93,7 +93,19 @@ const Projects = () => {
                                 </div>
 
                                 {/* 查看連結 */}
-                                <a href="#" className="project-link" onClick={(e) => e.preventDefault()} style={{ display: 'inline-flex', alignItems: 'center', fontWeight: '600', color: 'var(--color-primary)', fontSize: '0.9rem' }}>
+                                <a 
+                                    href={project.url} 
+                                    className="project-link" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    style={{ 
+                                        display: 'inline-flex', 
+                                        alignItems: 'center', 
+                                        fontWeight: '600', 
+                                        color: 'var(--color-primary)', 
+                                        fontSize: '0.9rem' 
+                                    }}
+                                >
                                     <span>{project.linkText}</span>
                                     <ArrowRight size={16} style={{ marginLeft: '4px' }} />
                                 </a>

@@ -76,42 +76,48 @@ export const content = {
           desc: "獲傑出論文獎，由 2025 管理創新與作業研究國際研討會主辦。時效性商品需在有限銷售期內，做出精準的需求預測與有效用的訂價，因此我的研究提出同時考量異質價格敏感度與寡占競爭的時效性產品動態訂價模型。",
           tags: ["Markov Decision Process", "Deep Learning"],
           image: "/images/project_dp.jpg",
-          linkText: "查看摘要"
+          linkText: "點擊查看貼文",
+          url: "https://hungtawang.github.io/2025/01/20/Dynamic_Pricing_Strategy_NTU"
         },
         {
           title: "AI CUP 2025春季賽－桌球智慧球拍資料的精準分析競賽",
           desc: "獲得全國銅牌獎 (633 隊伍中第 3 名)，由教育部人工智慧競賽與標註資料蒐集計畫辦公室主辦。我們先以傅立葉轉換將波型資料轉換為頻譜圖，再使用 LightGBM 與 CNN 混合模型，以提升模型預測準確度。",
           tags: ["Deep Learning", "Computer Vision"],
           image: "/images/project_aicup.jpg",
-          linkText: "查看摘要"
+          linkText: "點擊查看貼文",
+          url: "https://hungtawang.github.io/2025/04/10/AI_CUP_2025_Spring"
         },
-                {
+        {
           title: "雲湧智生｜臺灣生成式AI應用黑客松競賽",
           desc: "我們使用 Linux 操作研華科技提供的工業攝影機捕捉表情與動作，並透過 AWS Kinesis 串流至 AWS S3 儲存，再透過 AWS Bedrock 與 AWS Lambda 進行模型訓練，構建 Agent Workflow 自動生成對應的照護回覆。",
           tags: ["AWS Bedrock", "AWS Kinesis", "AWS Lambda", "Linux Shell Script"],
           image: "/images/project_advantech.jpg",
-          linkText: "查看摘要"
+          linkText: "點擊查看貼文",
+          url: "https://hungtawang.github.io/2025/04/20/Generative_AI_Applications_Hackathon"
         },
         {
           title: "AI郵局 智創新局 - 2024 郵政大數據競賽",
           desc: "獲最佳創意獎與數據應用創新獎，由中華郵政主辦。我們使用 AWS 作為工具，建構 ARIMA 模型預測未來 i 郵箱之寄/收件量，再結合赫夫模型與非線性規劃最佳化 i 郵箱設置，以提升新設 i 郵箱之使用率，模型預估之收益較舊有 i 郵箱提升 7.5 倍。",
           tags: ["Amazon S3", "QuickSight", "Sagemaker notebook", "Sagemaker canvas"],
           image: "/images/project_post.jpg",
-          linkText: "查看摘要"
+          linkText: "點擊查看貼文",
+          url: "https://hungtawang.github.io/2024/11/29/Chunghwa_Post_Co_Ltd_Big_Data_Competition"
         },
         {
           title: "利用 AHP 結合 LINE Bot 推薦投資組合 @ NCKU",
           desc: "使用 TEJ 資料庫蒐集資料並存入 PostgreSQL，運用 Principal Component Analysis (PCA) 與 Analytic Hierarchy Process (AHP) 模型進行特徵選取與投資漲跌預測，最終準確率達 59%。",
           tags: ["SQL", "AHP", "TEJ", "Linebot"],
           image: "/images/project_tej.jpg",
-          linkText: "查看摘要"
+          linkText: "點擊查看貼文",
+          url: "https://hungtawang.github.io/2023/11/20/Investment_Portfolio_Recommendation_NCKU"
         },
         {
           title: "成功盃個案競賽",
           desc: "獲得冠軍，由國立成功大學管理學院舉辦，我們針對日本 AKB48 的海外拓點提供選址建議以及落地方案，此外，我們更提出了詳盡的成本預算估計與財務規劃，創新的行銷策略與縝密的資產分配獲得評審的肯定。",
           tags: ["Make", "Automatic Workflow"],
           image: "/images/project_agent.jpg",
-          linkText: "查看摘要"
+          linkText: "點擊查看貼文",
+          url: "https://hungtawang.github.io/2021/10/02/NCKU_Business_Competition"
         }
       ]
     },
@@ -198,42 +204,48 @@ export const content = {
           desc: "Awarded Distinguished Paper Award at the 2025 International Conference on Management Innovation and Operations Research. As perishable products require precise demand forecasting and effective pricing, my research proposes a dynamic pricing model for time-sensitive products that considers both heterogeneous price sensitivity and oligopolistic competition.",
           tags: ["Markov Decision Process", "Deep Learning"],
           image: "/images/project_dp.jpg",
-          linkText: "View Abstract"
+          linkText: "Click to view my post",
+          url: "https://hungtawang.github.io/2025/01/20/Dynamic_Pricing_Strategy_NTU"
         },
         {
           title: "AI CUP 2025 Spring - Table Tennis Smart Racket Data Precision Analysis",
           desc: "Won National Bronze Medal (3rd place out of 633 teams). Hosted by the Ministry of Education. We converted waveform data into spectrograms using Fourier Transform, then utilized a hybrid LightGBM and CNN model to enhance prediction accuracy.",
           tags: ["Deep Learning", "Computer Vision"],
           image: "/images/project_aicup.jpg",
-          linkText: "View Abstract"
+          linkText: "Click to view my post",
+          url: "https://hungtawang.github.io/2025/04/10/AI_CUP_2025_Spring"
         },
         {
           title: "Generative AI Applications Hackathon",
           desc: "Utilized Linux to interface with industrial cameras from Advantech to capture patient expressions. Data was streamed via AWS Kinesis to S3, and processed via AWS Bedrock and Lambda for model training, constructing an Agent Workflow to automatically generate care responses.",
           tags: ["AWS Bedrock", "AWS Kinesis", "AWS Lambda", "Linux Shell Script"],
           image: "/images/project_advantech.jpg",
-          linkText: "View Abstract"
+          linkText: "Click to view my post",
+          url: "https://hungtawang.github.io/2025/04/20/Generative_AI_Applications_Hackathon"
         },
         {
           title: "2024 Chunghwa Post Big Data Competition",
           desc: "Received Best Creativity Award and Special Award from Galaxy Software Services. We built ARIMA models on AWS to predict iBox usage, and applied the Huff model with nonlinear programming to optimize iBox placement, projecting a 7.5x revenue increase compared to existing spots.",
           tags: ["Amazon S3", "QuickSight", "Sagemaker notebook", "Sagemaker canvas"],
           image: "/images/project_post.jpg",
-          linkText: "View Abstract"
+          linkText: "Click to view my post",
+          url: "https://hungtawang.github.io/2024/11/29/Chunghwa_Post_Co_Ltd_Big_Data_Competition"
         },
         {
           title: "Investment Portfolio Recommendation by AHP and LINE Bot @ NCKU",
           desc: "Collected data using TEJ database into PostgreSQL. Applied Principal Component Analysis (PCA) and Analytic Hierarchy Process (AHP) for feature selection and stock prediction, achieving an accuracy of 59%.",
           tags: ["SQL", "AHP", "TEJ", "Linebot"],
           image: "/images/project_tej.jpg",
-          linkText: "View Abstract"
+          linkText: "Click to view my post",
+          url: "https://hungtawang.github.io/2023/11/20/Investment_Portfolio_Recommendation_NCKU"
         },
         {
           title: "NCKU Case Study Competition",
           desc: "Won Championship hosted by NCKU College of Management. We provided location recommendations and localization strategies for Japanese group AKB48's overseas expansion, including detailed cost budgeting and financial planning. Our innovative marketing was highly praised by judges.",
           tags: ["Make", "Automatic Workflow"],
           image: "/images/project_agent.jpg",
-          linkText: "View Abstract"
+          linkText: "Click to view my post",
+          url: "https://hungtawang.github.io/2021/10/02/NCKU_Business_Competition"
         }
       ]
     },
