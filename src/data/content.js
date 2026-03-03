@@ -55,7 +55,7 @@ export const content = {
     // --- 技能卡片列表 ---
     skills: {
       title: "專業技能",
-      subtitle: "我的專業領域涵蓋多個開發堆疊，從前端到後端，從設計到開發",
+      subtitle: "我的專長涵蓋多個領域，學習新知是一件很令人興奮的事",
       items: [
         { title: "程式設計", desc: "C++, C#, Python, Gurobi, Qt Development, Linux Shell Script", icon: "code" },
         { title: "數據科學", desc: "R, SQL, SPSS, TEJ, Oracle Crystal Ball", icon: "chart-bar" },
@@ -69,48 +69,48 @@ export const content = {
     // --- 專案經歷 ---
     projects: {
       title: "專案經歷",
-      subtitle: "探索我參與的各項專案，包含 AI 應用、決策科學與大數據競賽",
+      subtitle: "決策科學、深度學習、大數據以及個案分析",
       items: [
         {
-          title: "考量市場區隔與參考價格之動態訂價策略",
-          desc: "獲 2025 管理創新與作業研究國際研討會「傑出論文獎」。運用動態規劃與機器學習模擬航空業顧客行為，優化定價效益。",
+          title: "考量市場區隔與參考價格之動態訂價策略 @ NTU",
+          desc: "獲傑出論文獎，由 2025 管理創新與作業研究國際研討會主辦。時效性商品需在有限銷售期內，做出精準的需求預測與有效用的訂價，因此我的研究提出同時考量異質價格敏感度與寡占競爭的時效性產品動態訂價模型。",
           tags: ["Markov Decision Process", "Deep Learning"],
           image: "/images/project_dp.jpg",
           linkText: "查看摘要"
         },
         {
-          title: "利用 AHP 結合 LINE Bot 推薦投資組合",
-          desc: "整合 TEJ 資料庫與 PostgreSQL，運用 PCA 與 AHP 模型進行特徵選取，打造準確率達 59% 的投資預測與推薦系統。",
-          tags: ["SQL", "AHP", "TEJ", "Linebot"],
-          image: "/images/project_tej.jpg",
-          linkText: "查看摘要"
-        },
-        {
-          title: "AI CUP 2025 春季賽: 桌球選手分類",
-          desc: "榮獲全國銅牌。開發 LightGBM 與 CNN 混合模型，應用傅立葉轉換處理不平衡資料，解決製造業視覺辨識痛點。",
+          title: "AI CUP 2025春季賽－桌球智慧球拍資料的精準分析競賽",
+          desc: "獲得全國銅牌獎 (633 隊伍中第 3 名)，由教育部人工智慧競賽與標註資料蒐集計畫辦公室主辦。我們先以傅立葉轉換將波型資料轉換為頻譜圖，再使用 LightGBM 與 CNN 混合模型，以提升模型預測準確度。",
           tags: ["Deep Learning", "Computer Vision"],
           image: "/images/project_aicup.jpg",
           linkText: "查看摘要"
         },
-        {
-          title: "AI 行銷認證：基礎實務應用",
-          desc: "利用 GenAI 工具與進階提示工程 (Prompt Engineering)，實現跨平台 (FB, IG, LINE) 的社群媒體自動化發文工作流。",
-          tags: ["Make", "Automatic Workflow"],
-          image: "/images/project_agent.jpg",
-          linkText: "查看摘要"
-        },
-        {
+                {
           title: "雲湧智生｜臺灣生成式AI應用黑客松競賽",
-          desc: "開發病患照護系統。串接 Linux 工業攝影機捕捉表情，並構建 Agent 工作流自動生成對應的照護回覆。",
-          tags: ["AWS Bedrock", "AWS S3", "Linux Shell Script"],
+          desc: "我們使用 Linux 操作研華科技提供的工業攝影機捕捉表情與動作，並透過 AWS Kinesis 串流至 AWS S3 儲存，再透過 AWS Bedrock 與 AWS Lambda 進行模型訓練，構建 Agent Workflow 自動生成對應的照護回覆。",
+          tags: ["AWS Bedrock", "AWS Kinesis", "AWS Lambda", "Linux Shell Script"],
           image: "/images/project_advantech.jpg",
           linkText: "查看摘要"
         },
         {
           title: "AI郵局 智創新局 - 2024 郵政大數據競賽",
-          desc: "獲創意獎與 GSS 特別獎。使用 ARIMA 模型與非線性規劃優化郵筒設置，預期為新設點提升 7.5 倍營收增量。",
-          tags: ["Time Series Analysis", "Nonlinear Programming"],
+          desc: "獲最佳創意獎與數據應用創新獎，由中華郵政主辦。我們使用 AWS 作為工具，建構 ARIMA 模型預測未來 i 郵箱之寄/收件量，再結合赫夫模型與非線性規劃最佳化 i 郵箱設置，以提升新設 i 郵箱之使用率，模型預估之收益較舊有 i 郵箱提升 7.5 倍。",
+          tags: ["Amazon S3", "QuickSight", "Sagemaker notebook", "Sagemaker canvas"],
           image: "/images/project_post.jpg",
+          linkText: "查看摘要"
+        },
+        {
+          title: "利用 AHP 結合 LINE Bot 推薦投資組合 @ NCKU",
+          desc: "使用 TEJ 資料庫蒐集資料並存入 PostgreSQL，運用 Principal Component Analysis (PCA) 與 Analytic Hierarchy Process (AHP) 模型進行特徵選取與投資漲跌預測，最終準確率達 59%。",
+          tags: ["SQL", "AHP", "TEJ", "Linebot"],
+          image: "/images/project_tej.jpg",
+          linkText: "查看摘要"
+        },
+        {
+          title: "成功盃個案競賽",
+          desc: "獲得冠軍，由國立成功大學管理學院舉辦，我們針對日本 AKB48 的海外拓點提供選址建議以及落地方案，此外，我們更提出了詳盡的成本預算估計與財務規劃，創新的行銷策略與縝密的資產分配獲得評審的肯定。",
+          tags: ["Make", "Automatic Workflow"],
+          image: "/images/project_agent.jpg",
           linkText: "查看摘要"
         }
       ]
@@ -127,14 +127,14 @@ export const content = {
     // --- 工作經歷 ---
     experience: {
       title: "工作經歷",
-      subtitle: "我在實習與在校期間的實務經驗",
+      subtitle: "我在實習累積的實務經驗",
       items: [
         {
           company: "PricewaterhouseCoopers (PwC) 資誠聯合會計師事務所",
           position: "審計實習生 (Auditor Intern)",
           duration: "2022年6月 - 2022年7月",
           location: "高雄，台灣",
-          desc: "對綠能與營造公司進行實地查核。執行會計傳票測試、控制測試與稅務抽查，並核對財務報表跨期差異。"
+          desc: "外派至綠能與營造公司進行實地查核。執行會計傳票測試、內部控制測試與稅務抽查，並核對財務報表是否有誤。"
         }
       ]
     },
@@ -149,9 +149,9 @@ export const content = {
     // --- Navigation ---
     nav: {
       home: "Home",
-      about: "About",
+      about: "About Me",
       skills: "Skills",
-      projects: "Project Experience",
+      projects: "Projects",
       contact: "Contact"
     },
 
@@ -159,88 +159,89 @@ export const content = {
     hero: {
       greeting: "Hi, I'm ",
       name: "Hung-Ta Wang",
-      subtitle: "Institute of Industrial Engineering (M.S.) Student",
-      description: "Double degree in Accounting(B.B.A) & Industrial and Information Management(B.M.S) at National Cheng Kung University",
-      viewProjects: "View My Posts",
+      subtitle: "M.S., Institute of Industrial Engineering @ NTU",
+      description: "Double Degree in Accounting & Industrial and Information Management @ NCKU",
+      viewProjects: "My Posts",   // Link to external blog
       contactMe: "Contact Me"
     },
 
     // --- About Me ---
     about: {
       title: "About Me",
-      subtitle: "I am a passionate interdisciplinary learner",
-      text1: "I am Hung-Ta Wang. I hold dual bachelor's degrees in Accounting and Industrial and Information Management from National Cheng Kung University (NCKU), and I am currently pursuing a master's degree in Industrial Engineering at National Taiwan University (NTU). My undergraduate training in accounting has instilled in me a meticulous approach to problem-solving and a solid understanding of business operations. At NTU, I am conducting research on dynamic pricing at the Decision Science Laboratory, focusing on methodologies such as Markov Decision Processes, Dynamic Programming, Time Series Analysis, and Deep Neural Networks.",
-      text2: "Beyond academic knowledge, I have applied theoretical frameworks to real-world challenges. During my undergraduate studies, my team won the championship in the NCKU Business Competition. As a master's student, I competed in the Chunghwa Post Co., Ltd. Big Data Competition, winning the Creativity Award and Special Award. Our project centered on using Time Series Analysis and Nonlinear Programming to optimize mailbox placement, achieving a projected revenue growth of 7.5 times.",
-      text3: "I aspire to play a positive and motivating role within a team, fostering creativity through collaboration. With my expertise in analytics and strong interpersonal communication skills, I am confident in my ability to bring fresh perspectives, drive innovation, and enhance overall team performance. I believe that persistence and clarity of thought are key to achieving excellence and continuous self-improvement."
+      subtitle: "Interdisciplinary Specialist in Industrial Engineering & Finance",
+      text1: "Hello, I am Hung-Ta, Wang. I hold dual bachelor's degrees in Accounting and Industrial and Information Management from National Cheng Kung University, and I am currently pursuing advanced studies at the Institute of Industrial Engineering, National Taiwan University. This interdisciplinary background has shaped my unique mindset: I possess the professional rigor and knowledge of an accountant regarding costs, benefits, and tax regulations, combined with the logical thinking and execution capability of an industrial engineer using data, optimization, and programming to implement management concepts.",
+      text2: "My greatest strength is my ability to provide innovative solutions with a holistic perspective. I excel at identifying core issues and solving them with minimal modifications to transform technology into a business advantage. For instance, in addressing ticket pricing in the airline industry, I developed a dynamic pricing model that accounts for customer behavior and reference price effects. This research, which bridges theory and practice, received the Distinguished Paper Award at the 2025 International Conference on Management Innovation and Operations Research (IC-MIOR).",
+      text3: "I believe that solid mathematics and logic are the core literacies for problem-solving; programming is the medium for executing that math, while management insight is the core value that unites people to solve problems together in a team. I have trained myself with these goals in mind while continuously learning new fields such as languages, web development, and Generative AI. I look forward to applying this interdisciplinary insight and bold, innovative execution in a professional setting to create value for the company."
     },
 
     // --- Skills Cards ---
     skills: {
       title: "Professional Skills",
-      subtitle: "My expertise spans multiple development stacks, from front-end to back-end, from design to development",
+      subtitle: "My expertise spans multiple fields. Learning new knowledge is always fascinating",
       items: [
-        { title: "Programming", desc: "Python (OOP), C++, R, Bash, SQL, Qt Development", icon: "code" },
-        { title: "Data Science", desc: "Gurobi, SPSS, TEJ, Oracle Crystal Ball, PostgreSQL", icon: "chart-bar" },
-        { title: "Web Development", desc: "HTML, CSS, JavaScript, jQuery, Bootstrap, Jekyll", icon: "laptop-code" },
-        { title: "Research Areas", desc: "Dynamic Programming, Operations Research, Machine Learning", icon: "brain" },
-        { title: "Business Domain", desc: "Accounting, Finance, Management Science, Industrial Mgmt", icon: "briefcase" },
-        { title: "Languages", desc: "English (TOEIC 880), Japanese (JLPT N3), Chinese (Native)", icon: "language" }
+        { title: "Programming", desc: "C++, C#, Python, Gurobi, Qt Development, Linux Shell Script", icon: "code" },
+        { title: "Data Science", desc: "R, SQL, SPSS, TEJ, Oracle Crystal Ball", icon: "chart-bar" },
+        { title: "Web Development", desc: "React, Jekyll, HTML, CSS, JavaScript, jQuery, Bootstrap", icon: "laptop-code" },
+        { title: "Academic Research", desc: "Deep Learning, Markov Decision Process, Revenue Management, Customer Heterogeneity, Behavior Simulation", icon: "brain" },
+        { title: "Financial Management", desc: "Financial Accounting, Cost Accounting, Auditing, Financial Statement Analysis, Engineering Economy, Derivatives of Financial Instruments", icon: "briefcase" },
+        { title: "Languages", desc: "Chinese (Native), English (TOEIC 880), Japanese (JLPT N3), German (Basic), Korean (Basic)", icon: "language" }
       ]
     },
 
     // --- Project Experience ---
     projects: {
       title: "Project Experience",
-      subtitle: "Explore my projects involving AI, Decision Science, and Big Data Competitions",
+      subtitle: "Decision Science, Deep Learning, Big Data and Case Studies",
       items: [
         {
-          title: "Dynamic Pricing @ NTU Decision Science Lab",
-          desc: "Awarded Distinguished Paper Award at 2025 IC-MIOR. Utilized DP and ML to simulate customer behavior and optimize airline pricing.",
-          tags: ["Dynamic Programming", "Machine Learning", "Optimization"],
+          title: "Dynamic Pricing Considering Reference-Price Effects and Segment-Specific Price Sensitivity @ NTU",
+          desc: "Awarded Distinguished Paper Award at the 2025 International Conference on Management Innovation and Operations Research. As perishable products require precise demand forecasting and effective pricing, my research proposes a dynamic pricing model for time-sensitive products that considers both heterogeneous price sensitivity and oligopolistic competition.",
+          tags: ["Markov Decision Process", "Deep Learning"],
           image: "/images/project_dp.jpg",
           linkText: "View Abstract"
         },
         {
-          title: "Investment Portfolio LINE Bot",
-          desc: "Integrated TEJ database and PostgreSQL, using PCA and AHP for feature selection to build a system with 59% prediction accuracy.",
-          tags: ["Python", "PostgreSQL", "Data Science"],
-          image: "/images/project_tej.jpg",
-          linkText: "View Abstract"
-        },
-        {
-          title: "AI CUP 2025 Spring: AI Defect Detection",
-          desc: "Bronze Medalist. Developed a hybrid model (LightGBM + CNN) using Fourier transforms for imbalanced data in manufacturing.",
-          tags: ["Deep Learning", "Computer Vision", "LightGBM"],
+          title: "AI CUP 2025 Spring - Table Tennis Smart Racket Data Precision Analysis",
+          desc: "Won National Bronze Medal (3rd place out of 633 teams). Hosted by the Ministry of Education. We converted waveform data into spectrograms using Fourier Transform, then utilized a hybrid LightGBM and CNN model to enhance prediction accuracy.",
+          tags: ["Deep Learning", "Computer Vision"],
           image: "/images/project_aicup.jpg",
           linkText: "View Abstract"
         },
         {
-          title: "Agentic Workflow Automation @ Dentsu",
-          desc: "Implemented cross-platform (FB, IG, LINE) social media automation workflows using GenAI tools and advanced prompt engineering.",
-          tags: ["Agentic LLM", "Automation", "GenAI"],
-          image: "/images/project_agent.jpg",
-          linkText: "View Abstract"
-        },
-        {
-          title: "Generative AI Hackathon @ Advantech",
-          desc: "Developed a patient care system. Interfaced industrial cameras to capture expressions and built an agent for automated replies.",
-          tags: ["AWS", "Linux", "AI Agent"],
+          title: "Generative AI Applications Hackathon",
+          desc: "Utilized Linux to interface with industrial cameras from Advantech to capture patient expressions. Data was streamed via AWS Kinesis to S3, and processed via AWS Bedrock and Lambda for model training, constructing an Agent Workflow to automatically generate care responses.",
+          tags: ["AWS Bedrock", "AWS Kinesis", "AWS Lambda", "Linux Shell Script"],
           image: "/images/project_advantech.jpg",
           linkText: "View Abstract"
         },
         {
-          title: "Big Data Competition @ Chunghwa Post",
-          desc: "Received Creativity Award and GSS Special Award. Used ARIMA and Nonlinear Programming to optimize mailbox placement.",
-          tags: ["Time Series", "Optimization", "Python"],
+          title: "2024 Chunghwa Post Big Data Competition",
+          desc: "Received Best Creativity Award and Special Award from Galaxy Software Services. We built ARIMA models on AWS to predict iBox usage, and applied the Huff model with nonlinear programming to optimize iBox placement, projecting a 7.5x revenue increase compared to existing spots.",
+          tags: ["Amazon S3", "QuickSight", "Sagemaker notebook", "Sagemaker canvas"],
           image: "/images/project_post.jpg",
+          linkText: "View Abstract"
+        },
+        {
+          title: "Investment Portfolio Recommendation by AHP and LINE Bot @ NCKU",
+          desc: "Collected data using TEJ database into PostgreSQL. Applied Principal Component Analysis (PCA) and Analytic Hierarchy Process (AHP) for feature selection and stock prediction, achieving an accuracy of 59%.",
+          tags: ["SQL", "AHP", "TEJ", "Linebot"],
+          image: "/images/project_tej.jpg",
+          linkText: "View Abstract"
+        },
+        {
+          title: "NCKU Case Study Competition",
+          desc: "Won Championship hosted by NCKU College of Management. We provided location recommendations and localization strategies for Japanese group AKB48's overseas expansion, including detailed cost budgeting and financial planning. Our innovative marketing was highly praised by judges.",
+          tags: ["Make", "Automatic Workflow"],
+          image: "/images/project_agent.jpg",
           linkText: "View Abstract"
         }
       ]
     },
 
+    // --- Contact Information ---
     contact: {
       title: "Contact Me",
-      subtitle: "Feel free to contact me!",
+      subtitle: "Feel free to reach out anytime!",
       email: "hungta.wang0118@gmail.com",
       phone: "+886 939 815 932"
     },
@@ -248,18 +249,19 @@ export const content = {
     // --- Work Experience ---
     experience: {
       title: "Work Experience",
-      subtitle: "My professional and internship experiences",
+      subtitle: "My professional experience during internship",
       items: [
         {
-          company: "PricewaterhouseCoopers (PwC)",
+          company: "PricewaterhouseCoopers (PwC) Taiwan",
           position: "Auditor Intern",
           duration: "Jun. 2022 - Jul. 2022",
           location: "Kaohsiung, Taiwan",
-          desc: "Conducted invoice audits during on-site visits to renewable energy and construction companies. Performed journal entry testing and financial statement reviews."
+          desc: "Dispatched to green energy and construction firms for on-site audits. Performed journal entry testing, internal control testing, and tax sampling audits while identifying discrepancies in financial statements."
         }
       ]
     },
 
+    // --- Footer ---
     footer: {
       copyright: "© 2026 Hung-Ta Wang. All rights reserved.",
     }
